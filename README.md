@@ -33,7 +33,7 @@
 |---|---|---|---|
 |orders_id|BIGINT|PK, AUTO_INCREMENT|주문 식별자|
 |user_id|BIGINT|NOT NULL|주문한 고객의 ID|
-|status|VARCHAR(45)|NOT NULL|주문 상태{PENDING(대기), COMPLETED(완료), FAILED(실패), CANCEL(취소)}|
+|status|VARCHAR(45)|NOT NULL|주문 상태<br>PENDING(대기)<br>COMPLETED(완료)<br>FAILED(실패)<br>CANCEL(취소)|
 |order_date_time|DATETIME|NOT NULL|주문 생성 일시|
 
 #### 주문 아이템(orders_item) 테이블 (주문 상품 상세 내역 기록)
