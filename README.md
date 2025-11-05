@@ -15,7 +15,7 @@
 - IntelliJ IDEA
 
 ## 프로젝트 구조 이미지
-![게임스토어 ERD](./images/game-store-erd.png)
+![프로젝트 구조](./send-box.drawio.png)
 
 ### 테이블
 
