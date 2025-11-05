@@ -1,0 +1,10 @@
+rootProject.name = 'send-box'
+
+include 'api-gateway'
+include 'batch'
+include 'batch-kill'
+include 'configserver'
+include 'eureka'
+include 'member'
+include 'ordering'
+include 'product'
