@@ -19,7 +19,7 @@
 
 ### 테이블
 
-#### 상품(product) 테이블 (상품 정보 관리)
+#### 상품(product)
 |컬럼명|데이터 타입|제약 조건|설명|
 |---|---|---|---|
 |product_id|BIGINT|PK, AUTO_INCREMENT|상품 식별자|
@@ -28,7 +28,7 @@
 |price|INT|NOT NULL|상품의 가격|
 |stock_quantity|INT|NOT NULL|상품의 재고|
 
-#### 주문(orders) 테이블 (주문 내역 기록)
+#### 주문(orders) 테이블
 |컬럼명|데이터 타입|제약 조건|설명|
 |---|---|---|---|
 |orders_id|BIGINT|PK, AUTO_INCREMENT|주문 식별자|
@@ -36,7 +36,7 @@
 |status|VARCHAR(45)|NOT NULL|주문 상태<br>PENDING(대기)<br>COMPLETED(완료)<br>FAILED(실패)<br>CANCEL(취소)|
 |order_date_time|DATETIME|NOT NULL|주문 생성 일시|
 
-#### 주문 아이템(orders_item) 테이블 (주문 상품 상세 내역 기록)
+#### 주문 아이템(orders_item)
 |컬럼명|데이터 타입|제약 조건|설명|
 |---|---|---|---|
 |orders_item_id|BIGINT|PK, AUTO_INCREMENT|주문 아이템 식별자|
@@ -46,7 +46,7 @@
 |price|INT|NOT NULL|주문한 상품의 가격|
 |quantity|INT|NOT NULL|주문 수량|
 
-#### 주문 실패 기록(orders_fail_log) 테이블 (주문 실패에 대한 내역 기록)
+#### 주문 실패 기록(orders_fail_log)
 |컬럼명|데이터 타입|제약 조건|설명|
 |---|---|---|---|
 |orders_fail_log_id|INT|PK, AUTO_INCREMNT|주문 실패 식별자|
