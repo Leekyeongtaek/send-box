@@ -28,7 +28,7 @@
 |price|INT|NOT NULL|상품의 가격|
 |stock_quantity|INT|NOT NULL|상품의 재고|
 
-#### 주문(orders) 테이블
+#### 주문(orders)
 |컬럼명|데이터 타입|제약 조건|설명|
 |---|---|---|---|
 |orders_id|BIGINT|PK, AUTO_INCREMENT|주문 식별자|
