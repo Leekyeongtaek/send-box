@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95680bc3-4f7a-4703-953b-294295a2b3dd" name="변경" comment="test: 배치 강의 연습">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/batch/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/resources/application.yml" afterDir="false" />
-    </list>
+    <list default="true" id="95680bc3-4f7a-4703-953b-294295a2b3dd" name="변경" comment="build: yml 코드 설정 세팅" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -228,7 +223,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BatchKillApplication">
+  <component name="RunManager" selected="Spring Boot.BatchApplication">
     <configuration name="send-box:common [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -409,7 +404,7 @@
       <workItem from="1762831759103" duration="1766000" />
       <workItem from="1762914983415" duration="353000" />
       <workItem from="1763168304671" duration="9989000" />
-      <workItem from="1763284828532" duration="883000" />
+      <workItem from="1763284828532" duration="1190000" />
     </task>
     <task id="LOCAL-00001" summary="test: 배치 강의 연습">
       <option name="closed" value="true" />
@@ -419,7 +414,23 @@
       <option name="project" value="LOCAL" />
       <updated>1763284855518</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="build: gradle 의존성 추가">
+      <option name="closed" value="true" />
+      <created>1763285788015</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1763285788015</updated>
+    </task>
+    <task id="LOCAL-00003" summary="build: yml 코드 설정 세팅">
+      <option name="closed" value="true" />
+      <created>1763285899607</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1763285899607</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -450,6 +461,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test: 배치 강의 연습" />
-    <option name="LAST_COMMIT_MESSAGE" value="test: 배치 강의 연습" />
+    <MESSAGE value="build: gradle 의존성 추가" />
+    <MESSAGE value="build: yml 코드 설정 세팅" />
+    <option name="LAST_COMMIT_MESSAGE" value="build: yml 코드 설정 세팅" />
   </component>
 </project>
