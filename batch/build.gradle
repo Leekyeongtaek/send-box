@@ -18,10 +18,25 @@ repositories {
     mavenCentral()
 }
 
+// 각 의존성이 컴파일·런타임·빌드 과정 중 어디에서 필요한지를 지정하는 역할
+// implementation: 컴파일할 때 + 런타임 실행할 때 모두 필요한 라이브러리 -> 컴파일 단계에 필요하고, 실행할 때도 꼭 필요한 의존성
+// runtimeOnly: 실행할 때만 필요한 런타임 의존성 -> MySQL JDBC 드라이버, H2 DB 드라이버 + 컴파일 시에는 사용하지 않지만 애플리케이션이 실행되는 시점에만 필요한 경우 사용
+// compileOnly: 컴파일 시에만 필요한 의존성 - 대표적 예시 -> Lombok + 코드를 생성해주는 역할이라 컴파일 때만 필요, 실제 실행 시에는 Lombok이 없어도 문제 없음
+// annotationProcessor: 컴파일 시에 어노테이션 기반 코드를 생성하는 라이브러리 -> 어노테이션을 분석해 새로운 코드를 만들어주는 도구가 필요할 때 사용
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-batch'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-json'
+    runtimeOnly 'com.mysql:mysql-connector-j'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    // --테스트용
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testCompileOnly 'org.projectlombok:lombok'
+    testAnnotationProcessor 'org.projectlombok:lombok'
 }
 
 tasks.named('test') {

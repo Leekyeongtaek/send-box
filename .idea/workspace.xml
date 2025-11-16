@@ -4,33 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95680bc3-4f7a-4703-953b-294295a2b3dd" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules/batch-kill/send-box.batch-kill.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch-kill/src/main/java/com/example/batchkill/config/CommonConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch-kill/src/main/java/com/example/batchkill/config/DeathNoteWriteJobConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch-kill/src/main/java/com/example/batchkill/config/ExampleConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch-kill/src/main/java/com/example/batchkill/config/HelloWorldJobConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch-kill/src/main/java/com/example/batchkill/config/ItemProcessExampleConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch-kill/src/main/java/com/example/batchkill/config/ItemProcessExampleConfig2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch-kill/src/main/java/com/example/batchkill/config/LogAnalysisJobConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch-kill/src/main/java/com/example/batchkill/config/OrderRecoveryJobConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch-kill/src/main/java/com/example/batchkill/config/PostBlockBatchConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch-kill/src/main/java/com/example/batchkill/config/SystemLogJobConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch-kill/src/main/java/com/example/batchkill/config/SystemTerminationConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch-kill/src/main/java/com/example/batchkill/config/SystemTerminationConfig2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch-kill/src/main/java/com/example/batchkill/config/TerminationRetryConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch-kill/src/main/java/com/example/batchkill/config/VictimRecordConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch-kill/src/main/java/com/example/batchkill/domain/BlockedPost.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch-kill/src/main/java/com/example/batchkill/domain/Post.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch-kill/src/main/java/com/example/batchkill/domain/Report.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch-kill/src/main/java/com/example/batchkill/param/SystemDestructionValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch-kill/src/main/java/com/example/batchkill/param/SystemInfiltrationParameters.java" afterDir="false" />
+    <list default="true" id="95680bc3-4f7a-4703-953b-294295a2b3dd" name="변경" comment="test: 배치 강의 연습">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch-kill/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/batch-kill/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch-kill/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/batch-kill/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/batch/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/batch/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/batch/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -431,7 +409,17 @@
       <workItem from="1762831759103" duration="1766000" />
       <workItem from="1762914983415" duration="353000" />
       <workItem from="1763168304671" duration="9989000" />
+      <workItem from="1763284828532" duration="883000" />
     </task>
+    <task id="LOCAL-00001" summary="test: 배치 강의 연습">
+      <option name="closed" value="true" />
+      <created>1763284855518</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1763284855518</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,5 +447,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="test: 배치 강의 연습" />
+    <option name="LAST_COMMIT_MESSAGE" value="test: 배치 강의 연습" />
   </component>
 </project>
