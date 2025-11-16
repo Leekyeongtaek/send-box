@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/batch-kill/send-box.batch-kill.main.iml" filepath="$PROJECT_DIR$/.idea/modules/batch-kill/send-box.batch-kill.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/member/send-box.member.main.iml" filepath="$PROJECT_DIR$/.idea/modules/member/send-box.member.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/ordering/send-box.ordering.main.iml" filepath="$PROJECT_DIR$/.idea/modules/ordering/send-box.ordering.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/product/send-box.product.main.iml" filepath="$PROJECT_DIR$/.idea/modules/product/send-box.product.main.iml" />

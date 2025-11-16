@@ -1,0 +1,24 @@
+spring:
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:org/springframework/batch/core/schema-drop-mysql.sql
+  batch:
+    jdbc:
+      initialize-schema: always
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/send_box?useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: root1234
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+    show_sql: true
+
+logging:
+  level:
+    org.springframework.batch.item.database: DEBUG
