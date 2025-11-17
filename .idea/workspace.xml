@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95680bc3-4f7a-4703-953b-294295a2b3dd" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/code/OrderStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/domain/OrdersBatch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/domain/OrdersDailySummary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/domain/OrdersItemBatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5768ecb9-d2c1-4831-9766-e72d2da7b49a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5768ecb9-d2c1-4831-9766-e72d2da7b49a.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5768ecb9-d2c1-4831-9766-e72d2da7b49a/storage_v2/_src_/schema/send_box.lHhfSg.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5768ecb9-d2c1-4831-9766-e72d2da7b49a/storage_v2/_src_/schema/send_box.lHhfSg.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="95680bc3-4f7a-4703-953b-294295a2b3dd" name="변경" comment="feat: 엔티티 생성 OrdersBatch, OrdersItemBatch, OrdersDailySummary">
+      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/repository/OrdersBatchRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/repository/OrdersDailySummaryRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,8 +113,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -438,7 +432,7 @@
       <workItem from="1762914983415" duration="353000" />
       <workItem from="1763168304671" duration="9989000" />
       <workItem from="1763284828532" duration="5318000" />
-      <workItem from="1763335303968" duration="10252000" />
+      <workItem from="1763335303968" duration="10816000" />
     </task>
     <task id="LOCAL-00001" summary="test: 배치 강의 연습">
       <option name="closed" value="true" />
@@ -472,7 +466,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763286196862</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: 엔티티 생성 OrdersBatch, OrdersItemBatch, OrdersDailySummary">
+      <option name="closed" value="true" />
+      <created>1763352212371</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1763352212371</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -506,6 +508,7 @@
     <MESSAGE value="build: gradle 의존성 추가" />
     <MESSAGE value="build: yml 코드 설정 세팅" />
     <MESSAGE value="feat: 배치 실행 결과를 프로세스 종료코드로 반환하도록 main 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 배치 실행 결과를 프로세스 종료코드로 반환하도록 main 수정" />
+    <MESSAGE value="feat: 엔티티 생성 OrdersBatch, OrdersItemBatch, OrdersDailySummary" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 엔티티 생성 OrdersBatch, OrdersItemBatch, OrdersDailySummary" />
   </component>
 </project>
