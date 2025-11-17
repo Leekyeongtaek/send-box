@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95680bc3-4f7a-4703-953b-294295a2b3dd" name="변경" comment="build: yml 코드 설정 세팅" />
+    <list default="true" id="95680bc3-4f7a-4703-953b-294295a2b3dd" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/code/OrderStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/domain/OrdersBatch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/domain/OrdersDailySummary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/domain/OrdersItemBatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5768ecb9-d2c1-4831-9766-e72d2da7b49a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5768ecb9-d2c1-4831-9766-e72d2da7b49a.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5768ecb9-d2c1-4831-9766-e72d2da7b49a/storage_v2/_src_/schema/send_box.lHhfSg.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5768ecb9-d2c1-4831-9766-e72d2da7b49a/storage_v2/_src_/schema/send_box.lHhfSg.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,12 +80,33 @@
         <task path="$PROJECT_DIR$/ordering">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/batch">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="send-box" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="send-box" type="f1a62948:ProjectNode" />
+                <item name="batch" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="send-box" type="f1a62948:ProjectNode" />
+                <item name="batch" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="send-box" type="f1a62948:ProjectNode" />
+                <item name="batch" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -138,6 +168,7 @@
     &quot;Gradle.ordering 빌드.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.product 빌드.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.send-box 빌드.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.send-box:batch [build].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.send-box:common [build].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.send-box:ordering [build].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.send-box:ordering [clean].executor&quot;: &quot;Run&quot;,
@@ -153,6 +184,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Spring Boot.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.BatchApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.BatchKillApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.CommonEventApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.EurekaApplication.executor&quot;: &quot;Run&quot;,
@@ -213,6 +245,7 @@
           <value>
             <map>
               <entry key="ApiGatewayApplication" value="STOPPED" />
+              <entry key="BatchApplication" value="STOPPED" />
               <entry key="BatchKillApplication" value="STOPPED" />
               <entry key="EurekaApplication" value="STOPPED" />
               <entry key="OrderingApplication" value="STOPPED" />
@@ -223,11 +256,11 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BatchApplication">
-    <configuration name="send-box:common [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.send-box:batch [build]">
+    <configuration name="send-box:batch [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/common" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/batch" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -360,11 +393,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.send-box:batch [build]" />
         <item itemvalue="Spring Boot.ApiGatewayApplication" />
         <item itemvalue="Spring Boot.EurekaApplication" />
         <item itemvalue="Gradle.send-box:ordering [build]" />
         <item itemvalue="Gradle.send-box:ordering [clean]" />
-        <item itemvalue="Gradle.send-box:common [build]" />
       </list>
     </recent_temporary>
   </component>
@@ -404,7 +437,8 @@
       <workItem from="1762831759103" duration="1766000" />
       <workItem from="1762914983415" duration="353000" />
       <workItem from="1763168304671" duration="9989000" />
-      <workItem from="1763284828532" duration="1190000" />
+      <workItem from="1763284828532" duration="5318000" />
+      <workItem from="1763335303968" duration="10252000" />
     </task>
     <task id="LOCAL-00001" summary="test: 배치 강의 연습">
       <option name="closed" value="true" />
@@ -430,7 +464,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763285899607</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: 배치 실행 결과를 프로세스 종료코드로 반환하도록 main 수정">
+      <option name="closed" value="true" />
+      <created>1763286196862</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1763286196862</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -463,6 +505,7 @@
     <MESSAGE value="test: 배치 강의 연습" />
     <MESSAGE value="build: gradle 의존성 추가" />
     <MESSAGE value="build: yml 코드 설정 세팅" />
-    <option name="LAST_COMMIT_MESSAGE" value="build: yml 코드 설정 세팅" />
+    <MESSAGE value="feat: 배치 실행 결과를 프로세스 종료코드로 반환하도록 main 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 배치 실행 결과를 프로세스 종료코드로 반환하도록 main 수정" />
   </component>
 </project>
