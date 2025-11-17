@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95680bc3-4f7a-4703-953b-294295a2b3dd" name="변경" comment="feat: 엔티티 생성 OrdersBatch, OrdersItemBatch, OrdersDailySummary">
-      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/repository/OrdersBatchRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/repository/OrdersDailySummaryRepository.java" afterDir="false" />
+    <list default="true" id="95680bc3-4f7a-4703-953b-294295a2b3dd" name="변경" comment="feat: repository 추가">
+      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/OrdersDailySummaryJobConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,8 +113,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -432,7 +432,7 @@
       <workItem from="1762914983415" duration="353000" />
       <workItem from="1763168304671" duration="9989000" />
       <workItem from="1763284828532" duration="5318000" />
-      <workItem from="1763335303968" duration="10816000" />
+      <workItem from="1763335303968" duration="16861000" />
     </task>
     <task id="LOCAL-00001" summary="test: 배치 강의 연습">
       <option name="closed" value="true" />
@@ -474,7 +474,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763352212371</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat: repository 추가">
+      <option name="closed" value="true" />
+      <created>1763352759167</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1763352759167</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -509,6 +517,7 @@
     <MESSAGE value="build: yml 코드 설정 세팅" />
     <MESSAGE value="feat: 배치 실행 결과를 프로세스 종료코드로 반환하도록 main 수정" />
     <MESSAGE value="feat: 엔티티 생성 OrdersBatch, OrdersItemBatch, OrdersDailySummary" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 엔티티 생성 OrdersBatch, OrdersItemBatch, OrdersDailySummary" />
+    <MESSAGE value="feat: repository 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: repository 추가" />
   </component>
 </project>
