@@ -4,9 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95680bc3-4f7a-4703-953b-294295a2b3dd" name="변경" comment="feat: repository 추가">
-      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/OrdersDailySummaryJobConfig.java" afterDir="false" />
+    <list default="true" id="95680bc3-4f7a-4703-953b-294295a2b3dd" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/config/CommonConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/dto/OrderBatchDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/dto/OrderItemBatchDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/dto/OrdersDailySummaryDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/OrdersDailySummaryJobConfigByJdbc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/OrdersDailySummaryJobConfigByJpa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5768ecb9-d2c1-4831-9766-e72d2da7b49a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5768ecb9-d2c1-4831-9766-e72d2da7b49a.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/domain/OrdersBatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/domain/OrdersBatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/domain/OrdersDailySummary.java" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/domain/OrdersDailySummary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/domain/OrdersItemBatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/domain/OrdersItemBatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/OrdersDailySummaryJobConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/batch/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,6 +178,7 @@
     &quot;Gradle.send-box:common [build].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.send-box:ordering [build].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.send-box:ordering [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.소스 다운로드.executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;새/업데이트된 데이터베이스 구성이 발견되었습니다&quot;,
     &quot;Notification.DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;true&quot;,
@@ -218,10 +231,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.batch.dto" />
+      <recent name="com.example.batch.job" />
       <recent name="com.example.common.events" />
       <recent name="com.example.common.message" />
       <recent name="com.example.commonevent.events" />
-      <recent name="com.example.common.config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -432,7 +446,11 @@
       <workItem from="1762914983415" duration="353000" />
       <workItem from="1763168304671" duration="9989000" />
       <workItem from="1763284828532" duration="5318000" />
-      <workItem from="1763335303968" duration="16861000" />
+      <workItem from="1763335303968" duration="24231000" />
+      <workItem from="1764768502731" duration="19000" />
+      <workItem from="1765069445785" duration="15299000" />
+      <workItem from="1765167378724" duration="29464000" />
+      <workItem from="1765271918480" duration="6891000" />
     </task>
     <task id="LOCAL-00001" summary="test: 배치 강의 연습">
       <option name="closed" value="true" />
@@ -482,7 +500,23 @@
       <option name="project" value="LOCAL" />
       <updated>1763352759167</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="build: gitignore">
+      <option name="closed" value="true" />
+      <created>1763377595335</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1763377595335</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: orders batch job 구조">
+      <option name="closed" value="true" />
+      <created>1763377644740</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1763377644740</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -518,6 +552,8 @@
     <MESSAGE value="feat: 배치 실행 결과를 프로세스 종료코드로 반환하도록 main 수정" />
     <MESSAGE value="feat: 엔티티 생성 OrdersBatch, OrdersItemBatch, OrdersDailySummary" />
     <MESSAGE value="feat: repository 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: repository 추가" />
+    <MESSAGE value="build: gitignore" />
+    <MESSAGE value="feat: orders batch job 구조" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: orders batch job 구조" />
   </component>
 </project>

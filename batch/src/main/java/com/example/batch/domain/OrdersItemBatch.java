@@ -16,9 +16,6 @@ public class OrdersItemBatch {
     @Column(name = "ORDERS_ITEM_BATCH_ID", nullable = false)
     private Long id;
 
-    @Column(name = "ORDERS_BATCH_ID", nullable = false)
-    private Long ordersBatchId;
-
     @Column(name = "PRODUCT_BATCH_ID", nullable = false)
     private Long productBatchId;
 
@@ -30,4 +27,19 @@ public class OrdersItemBatch {
 
     @Column(name = "QUANTITY", nullable = false)
     private int quantity;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "ORDERS_BATCH_ID")
+    private OrdersBatch ordersBatch;
+
+    @Override
+    public String toString() {
+        return "OrdersItemBatch{" +
+                "id=" + id +
+                ", productBatchId=" + productBatchId +
+                ", productName='" + productName + '\'' +
+                ", price=" + price +
+                ", quantity=" + quantity +
+                '}';
+    }
 }

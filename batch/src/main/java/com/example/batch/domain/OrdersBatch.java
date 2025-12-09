@@ -30,6 +30,17 @@ public class OrdersBatch {
     @Column(name = "ORDER_DATE_TIME", nullable = false)
     private LocalDateTime orderDateTime;
 
-    @OneToMany(fetch = FetchType.EAGER)
-    private List<OrdersItemBatch> ordersItemBatchList;
+    @OneToMany(mappedBy = "ordersBatch", fetch = FetchType.EAGER)
+    private List<OrdersItemBatch> ordersItems;
+
+    @Override
+    public String toString() {
+        return "OrdersBatch{" +
+                "id=" + id +
+                ", userId=" + userId +
+                ", status=" + status +
+                ", orderDateTime=" + orderDateTime +
+                ", ordersItemBatchList=" + ordersItems +
+                '}';
+    }
 }
