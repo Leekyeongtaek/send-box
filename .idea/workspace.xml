@@ -4,21 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95680bc3-4f7a-4703-953b-294295a2b3dd" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/config/CommonConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/dto/OrderBatchDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/dto/OrderItemBatchDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/dto/OrdersDailySummaryDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/OrdersDailySummaryJobConfigByJdbc.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/OrdersDailySummaryJobConfigByJpa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5768ecb9-d2c1-4831-9766-e72d2da7b49a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5768ecb9-d2c1-4831-9766-e72d2da7b49a.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/domain/OrdersBatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/domain/OrdersBatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/domain/OrdersDailySummary.java" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/domain/OrdersDailySummary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/domain/OrdersItemBatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/domain/OrdersItemBatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/OrdersDailySummaryJobConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/resources/application.yml" afterDir="false" />
+    <list default="true" id="95680bc3-4f7a-4703-953b-294295a2b3dd" name="변경" comment="feat: 주문 정산 배치 기능 작업 중단점">
+      <change beforePath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/OrdersDailySummaryJobConfigByJdbc.java" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/orders/OrdersDailySummaryJobConfigByJdbc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/OrdersDailySummaryJobConfigByJpa.java" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/orders/OrdersDailySummaryJobConfigByJpa.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -450,7 +438,7 @@
       <workItem from="1764768502731" duration="19000" />
       <workItem from="1765069445785" duration="15299000" />
       <workItem from="1765167378724" duration="29464000" />
-      <workItem from="1765271918480" duration="6891000" />
+      <workItem from="1765271918480" duration="8340000" />
     </task>
     <task id="LOCAL-00001" summary="test: 배치 강의 연습">
       <option name="closed" value="true" />
@@ -516,7 +504,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763377644740</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feat: 주문 정산 배치 기능 작업 중단점">
+      <option name="closed" value="true" />
+      <created>1765280157181</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1765280157181</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -554,6 +550,7 @@
     <MESSAGE value="feat: repository 추가" />
     <MESSAGE value="build: gitignore" />
     <MESSAGE value="feat: orders batch job 구조" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: orders batch job 구조" />
+    <MESSAGE value="feat: 주문 정산 배치 기능 작업 중단점" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 주문 정산 배치 기능 작업 중단점" />
   </component>
 </project>

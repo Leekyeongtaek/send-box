@@ -1,4 +1,4 @@
-package com.example.batch.job;
+package com.example.batch.job.orders;
 
 import com.example.batch.domain.OrdersDailySummary;
 import com.example.batch.dto.OrderBatchDto;
