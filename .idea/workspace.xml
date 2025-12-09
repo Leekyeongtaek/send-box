@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95680bc3-4f7a-4703-953b-294295a2b3dd" name="변경" comment="feat: 주문 정산 배치 기능 작업 중단점">
-      <change beforePath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/OrdersDailySummaryJobConfigByJdbc.java" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/orders/OrdersDailySummaryJobConfigByJdbc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/OrdersDailySummaryJobConfigByJpa.java" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/orders/OrdersDailySummaryJobConfigByJpa.java" afterDir="false" />
+    <list default="true" id="95680bc3-4f7a-4703-953b-294295a2b3dd" name="변경" comment="refactor: 패키지 변경">
+      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/code/MemberSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/code/MemberStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/domain/MemberBatch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/dto/MemberBatchDto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,8 +114,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -438,7 +440,7 @@
       <workItem from="1764768502731" duration="19000" />
       <workItem from="1765069445785" duration="15299000" />
       <workItem from="1765167378724" duration="29464000" />
-      <workItem from="1765271918480" duration="8340000" />
+      <workItem from="1765271918480" duration="9404000" />
     </task>
     <task id="LOCAL-00001" summary="test: 배치 강의 연습">
       <option name="closed" value="true" />
@@ -512,7 +514,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765280157181</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="refactor: 패키지 변경">
+      <option name="closed" value="true" />
+      <created>1765287087880</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1765287087880</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -551,6 +561,7 @@
     <MESSAGE value="build: gitignore" />
     <MESSAGE value="feat: orders batch job 구조" />
     <MESSAGE value="feat: 주문 정산 배치 기능 작업 중단점" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 주문 정산 배치 기능 작업 중단점" />
+    <MESSAGE value="refactor: 패키지 변경" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: 패키지 변경" />
   </component>
 </project>
