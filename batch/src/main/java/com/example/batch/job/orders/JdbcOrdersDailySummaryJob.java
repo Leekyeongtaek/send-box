@@ -33,7 +33,7 @@ import java.util.Map;
 @Slf4j
 @Configuration
 @RequiredArgsConstructor
-public class OrdersDailySummaryJobConfigByJdbc {
+public class JdbcOrdersDailySummaryJob {
 
     // ordersDailySummaryJdbcJob
     // ordersDailySummaryJdbcStep

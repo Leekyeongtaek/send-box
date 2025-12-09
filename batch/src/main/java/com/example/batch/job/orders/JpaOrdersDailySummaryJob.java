@@ -28,7 +28,7 @@ import java.util.Map;
 @Slf4j
 @Configuration
 @RequiredArgsConstructor
-public class OrdersDailySummaryJobConfigByJpa {
+public class JpaOrdersDailySummaryJob {
 
     private final JobRepository jobRepository;
     private final PlatformTransactionManager transactionManager;
