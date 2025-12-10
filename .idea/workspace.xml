@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95680bc3-4f7a-4703-953b-294295a2b3dd" name="변경" comment="refactor: 패키지 변경">
-      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/code/MemberSource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/code/MemberStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/domain/MemberBatch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/dto/MemberBatchDto.java" afterDir="false" />
+    <list default="true" id="95680bc3-4f7a-4703-953b-294295a2b3dd" name="변경" comment="refactor: 네이밍 변경">
+      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/member/JdbcMemberRegistrationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5768ecb9-d2c1-4831-9766-e72d2da7b49a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5768ecb9-d2c1-4831-9766-e72d2da7b49a.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/code/MemberSource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/domain/MemberBatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/domain/MemberBatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/dto/MemberBatchDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/dto/MemberBatchDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/orders/JdbcOrdersDailySummaryJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/orders/JdbcOrdersDailySummaryJob.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,8 +117,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -440,7 +443,8 @@
       <workItem from="1764768502731" duration="19000" />
       <workItem from="1765069445785" duration="15299000" />
       <workItem from="1765167378724" duration="29464000" />
-      <workItem from="1765271918480" duration="9404000" />
+      <workItem from="1765271918480" duration="14539000" />
+      <workItem from="1765330442363" duration="3472000" />
     </task>
     <task id="LOCAL-00001" summary="test: 배치 강의 연습">
       <option name="closed" value="true" />
@@ -522,7 +526,31 @@
       <option name="project" value="LOCAL" />
       <updated>1765287087880</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="feat: domain, dto 생성">
+      <option name="closed" value="true" />
+      <created>1765288383157</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1765288383157</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat: repository 생성">
+      <option name="closed" value="true" />
+      <created>1765288415833</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1765288415833</updated>
+    </task>
+    <task id="LOCAL-00013" summary="refactor: 네이밍 변경">
+      <option name="closed" value="true" />
+      <created>1765288597802</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1765288597802</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -562,6 +590,9 @@
     <MESSAGE value="feat: orders batch job 구조" />
     <MESSAGE value="feat: 주문 정산 배치 기능 작업 중단점" />
     <MESSAGE value="refactor: 패키지 변경" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: 패키지 변경" />
+    <MESSAGE value="feat: domain, dto 생성" />
+    <MESSAGE value="feat: repository 생성" />
+    <MESSAGE value="refactor: 네이밍 변경" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: 네이밍 변경" />
   </component>
 </project>

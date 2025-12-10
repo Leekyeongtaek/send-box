@@ -1,6 +1,5 @@
 package com.example.batch.domain;
 
-import com.example.batch.code.MemberSource;
 import com.example.batch.code.MemberStatus;
 import jakarta.persistence.*;
 import lombok.*;
@@ -22,10 +21,6 @@ public class MemberBatch {
 
     @Column(name = "EMAIL", nullable = false)
     private String email;
-
-    @Column(name = "SOURCE", nullable = false)
-    @Enumerated(EnumType.STRING)
-    private MemberSource source;
 
     @Column(name = "STATUS", nullable = false)
     @Enumerated(EnumType.STRING)

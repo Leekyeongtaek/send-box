@@ -1025,7 +1025,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <Current>1</Current>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-12-09.13:52:42</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-12-10.02:00:31</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <schema id="298" parent="1" name="sys">
@@ -1514,12 +1514,10 @@ JOB_KEY</ColNames>
       <Position>2</Position>
       <StoredType>varchar(150)|0s</StoredType>
     </column>
-    <column id="403" parent="314" name="source">
-      <Comment>WEB, MOBILE, ADMIN</Comment>
-      <DefaultExpression>&apos;WEB&apos;</DefaultExpression>
+    <column id="403" parent="314" name="requested_at">
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StoredType>varchar(10)|0s</StoredType>
+      <StoredType>datetime|0s</StoredType>
     </column>
     <column id="404" parent="314" name="status">
       <Comment>READY, FAILED, DONE</Comment>
@@ -1545,441 +1543,446 @@ JOB_KEY</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="408" parent="314" name="PRIMARY">
+    <index id="408" parent="314" name="combine_idx">
+      <ColNames>requested_at
+status</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="409" parent="314" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="409" parent="315" name="orders_id">
+    <column id="410" parent="315" name="orders_id">
       <AutoIncrement>29</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>bigint|0s</StoredType>
     </column>
-    <column id="410" parent="315" name="user_id">
+    <column id="411" parent="315" name="user_id">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>bigint|0s</StoredType>
     </column>
-    <column id="411" parent="315" name="status">
+    <column id="412" parent="315" name="status">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>varchar(45)|0s</StoredType>
     </column>
-    <column id="412" parent="315" name="order_date_time">
+    <column id="413" parent="315" name="order_date_time">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <index id="413" parent="315" name="PRIMARY">
+    <index id="414" parent="315" name="PRIMARY">
       <ColNames>orders_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="414" parent="315" name="PRIMARY">
+    <key id="415" parent="315" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="415" parent="316" name="orders_batch_id">
+    <column id="416" parent="316" name="orders_batch_id">
       <AutoIncrement>16</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>bigint|0s</StoredType>
     </column>
-    <column id="416" parent="316" name="user_id">
+    <column id="417" parent="316" name="user_id">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>bigint|0s</StoredType>
     </column>
-    <column id="417" parent="316" name="status">
+    <column id="418" parent="316" name="status">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>varchar(45)|0s</StoredType>
     </column>
-    <column id="418" parent="316" name="order_date_time">
+    <column id="419" parent="316" name="order_date_time">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <index id="419" parent="316" name="PRIMARY">
+    <index id="420" parent="316" name="PRIMARY">
       <ColNames>orders_batch_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="420" parent="316" name="idx_date_time">
+    <index id="421" parent="316" name="idx_date_time">
       <ColNames>order_date_time</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="421" parent="316" name="PRIMARY">
+    <key id="422" parent="316" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="422" parent="317" name="orders_daily_summary_id">
+    <column id="423" parent="317" name="orders_daily_summary_id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>bigint|0s</StoredType>
     </column>
-    <column id="423" parent="317" name="summary_date">
+    <column id="424" parent="317" name="summary_date">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>date|0s</StoredType>
     </column>
-    <column id="424" parent="317" name="order_count">
+    <column id="425" parent="317" name="order_count">
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="425" parent="317" name="item_count">
+    <column id="426" parent="317" name="item_count">
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="426" parent="317" name="completed_orders">
+    <column id="427" parent="317" name="completed_orders">
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="427" parent="317" name="failed_orders">
+    <column id="428" parent="317" name="failed_orders">
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="428" parent="317" name="canceled_orders">
+    <column id="429" parent="317" name="canceled_orders">
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="429" parent="317" name="completed_amount">
+    <column id="430" parent="317" name="completed_amount">
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>8</Position>
       <StoredType>bigint|0s</StoredType>
     </column>
-    <column id="430" parent="317" name="failed_amount">
+    <column id="431" parent="317" name="failed_amount">
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>9</Position>
       <StoredType>bigint|0s</StoredType>
     </column>
-    <column id="431" parent="317" name="canceled_amount">
+    <column id="432" parent="317" name="canceled_amount">
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>10</Position>
       <StoredType>bigint|0s</StoredType>
     </column>
-    <column id="432" parent="317" name="created_at">
+    <column id="433" parent="317" name="created_at">
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>11</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <column id="433" parent="317" name="updated_at">
+    <column id="434" parent="317" name="updated_at">
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <NotNull>1</NotNull>
       <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
       <Position>12</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <index id="434" parent="317" name="PRIMARY">
+    <index id="435" parent="317" name="PRIMARY">
       <ColNames>orders_daily_summary_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="435" parent="317" name="summary_date">
+    <index id="436" parent="317" name="summary_date">
       <ColNames>summary_date</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="436" parent="317" name="PRIMARY">
+    <key id="437" parent="317" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="437" parent="317" name="summary_date">
+    <key id="438" parent="317" name="summary_date">
       <UnderlyingIndexName>summary_date</UnderlyingIndexName>
     </key>
-    <column id="438" parent="318" name="orders_fail_log_id">
+    <column id="439" parent="318" name="orders_fail_log_id">
       <AutoIncrement>45</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="439" parent="318" name="orders_id">
+    <column id="440" parent="318" name="orders_id">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="440" parent="318" name="fail_message">
+    <column id="441" parent="318" name="fail_message">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>varchar(255)|0s</StoredType>
     </column>
-    <column id="441" parent="318" name="created_time">
+    <column id="442" parent="318" name="created_time">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <column id="442" parent="318" name="updated_time">
+    <column id="443" parent="318" name="updated_time">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <index id="443" parent="318" name="PRIMARY">
+    <index id="444" parent="318" name="PRIMARY">
       <ColNames>orders_fail_log_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="444" parent="318" name="PRIMARY">
+    <key id="445" parent="318" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="445" parent="319" name="orders_item_id">
+    <column id="446" parent="319" name="orders_item_id">
       <AutoIncrement>54</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="446" parent="319" name="orders_id">
+    <column id="447" parent="319" name="orders_id">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="447" parent="319" name="product_id">
+    <column id="448" parent="319" name="product_id">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="448" parent="319" name="product_name">
+    <column id="449" parent="319" name="product_name">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>varchar(255)|0s</StoredType>
     </column>
-    <column id="449" parent="319" name="price">
+    <column id="450" parent="319" name="price">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="450" parent="319" name="quantity">
+    <column id="451" parent="319" name="quantity">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <index id="451" parent="319" name="PRIMARY">
+    <index id="452" parent="319" name="PRIMARY">
       <ColNames>orders_item_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="452" parent="319" name="PRIMARY">
+    <key id="453" parent="319" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="453" parent="320" name="orders_item_batch_id">
+    <column id="454" parent="320" name="orders_item_batch_id">
       <AutoIncrement>64</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="454" parent="320" name="orders_batch_id">
+    <column id="455" parent="320" name="orders_batch_id">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="455" parent="320" name="product_batch_id">
+    <column id="456" parent="320" name="product_batch_id">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="456" parent="320" name="product_name">
+    <column id="457" parent="320" name="product_name">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>varchar(255)|0s</StoredType>
     </column>
-    <column id="457" parent="320" name="price">
+    <column id="458" parent="320" name="price">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="458" parent="320" name="quantity">
+    <column id="459" parent="320" name="quantity">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <index id="459" parent="320" name="PRIMARY">
+    <index id="460" parent="320" name="PRIMARY">
       <ColNames>orders_item_batch_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="460" parent="320" name="PRIMARY">
+    <key id="461" parent="320" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="461" parent="321" name="id">
+    <column id="462" parent="321" name="id">
       <AutoIncrement>32106233</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>bigint|0s</StoredType>
     </column>
-    <column id="462" parent="321" name="user_id">
+    <column id="463" parent="321" name="user_id">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>bigint|0s</StoredType>
     </column>
-    <column id="463" parent="321" name="product_id">
+    <column id="464" parent="321" name="product_id">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>bigint|0s</StoredType>
     </column>
-    <column id="464" parent="321" name="status">
+    <column id="465" parent="321" name="status">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>varchar(20)|0s</StoredType>
     </column>
-    <column id="465" parent="321" name="amount">
+    <column id="466" parent="321" name="amount">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>decimal(10,2 digit)|0s</StoredType>
     </column>
-    <column id="466" parent="321" name="region">
+    <column id="467" parent="321" name="region">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>varchar(20)|0s</StoredType>
     </column>
-    <column id="467" parent="321" name="category">
+    <column id="468" parent="321" name="category">
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StoredType>varchar(20)|0s</StoredType>
     </column>
-    <column id="468" parent="321" name="created_at">
+    <column id="469" parent="321" name="created_at">
       <NotNull>1</NotNull>
       <Position>8</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <column id="469" parent="321" name="updated_at">
+    <column id="470" parent="321" name="updated_at">
       <NotNull>1</NotNull>
       <Position>9</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <index id="470" parent="321" name="PRIMARY">
+    <index id="471" parent="321" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="471" parent="321" name="PRIMARY">
+    <key id="472" parent="321" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="472" parent="322" name="product_id">
+    <column id="473" parent="322" name="product_id">
       <AutoIncrement>34</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>bigint|0s</StoredType>
     </column>
-    <column id="473" parent="322" name="category">
+    <column id="474" parent="322" name="category">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <column id="474" parent="322" name="name">
+    <column id="475" parent="322" name="name">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>varchar(255)|0s</StoredType>
     </column>
-    <column id="475" parent="322" name="price">
+    <column id="476" parent="322" name="price">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="476" parent="322" name="stock_quantity">
+    <column id="477" parent="322" name="stock_quantity">
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <index id="477" parent="322" name="PRIMARY">
+    <index id="478" parent="322" name="PRIMARY">
       <ColNames>product_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="478" parent="322" name="name_UNIQUE">
+    <index id="479" parent="322" name="name_UNIQUE">
       <ColNames>name</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="479" parent="322" name="PRIMARY">
+    <key id="480" parent="322" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="480" parent="322" name="name_UNIQUE">
+    <key id="481" parent="322" name="name_UNIQUE">
       <UnderlyingIndexName>name_UNIQUE</UnderlyingIndexName>
     </key>
-    <column id="481" parent="323" name="product_batch_id">
+    <column id="482" parent="323" name="product_batch_id">
       <AutoIncrement>21</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <column id="482" parent="323" name="product_name">
+    <column id="483" parent="323" name="product_name">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>varchar(255)|0s</StoredType>
     </column>
-    <column id="483" parent="323" name="price">
+    <column id="484" parent="323" name="price">
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>int|0s</StoredType>
     </column>
-    <index id="484" parent="323" name="PRIMARY">
+    <index id="485" parent="323" name="PRIMARY">
       <ColNames>product_batch_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="485" parent="323" name="PRIMARY">
+    <key id="486" parent="323" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="486" parent="324" name="id">
+    <column id="487" parent="324" name="id">
       <AutoIncrement>20</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>bigint|0s</StoredType>
     </column>
-    <column id="487" parent="324" name="name">
+    <column id="488" parent="324" name="name">
       <Position>2</Position>
       <StoredType>varchar(255)|0s</StoredType>
     </column>
-    <column id="488" parent="324" name="process_id">
+    <column id="489" parent="324" name="process_id">
       <Position>3</Position>
       <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <column id="489" parent="324" name="terminated_at">
+    <column id="490" parent="324" name="terminated_at">
       <Position>4</Position>
       <StoredType>timestamp|0s</StoredType>
     </column>
-    <column id="490" parent="324" name="status">
+    <column id="491" parent="324" name="status">
       <Position>5</Position>
       <StoredType>varchar(20)|0s</StoredType>
     </column>
-    <index id="491" parent="324" name="PRIMARY">
+    <index id="492" parent="324" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="492" parent="324" name="PRIMARY">
+    <key id="493" parent="324" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

@@ -1,6 +1,5 @@
 package com.example.batch.dto;
 
-import com.example.batch.code.MemberSource;
 import com.example.batch.code.MemberStatus;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,8 +15,12 @@ import java.time.LocalDateTime;
 public class MemberBatchDto {
     private Long id;
     private String email;
-    private MemberSource source;
+    private LocalDateTime requestedAt;
     private MemberStatus status;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
+
+    public String getStatusName() {
+        return status != null ? status.name() : null;
+    }
 }
