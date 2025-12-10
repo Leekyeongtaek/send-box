@@ -46,7 +46,7 @@ public class JdbcMemberRegistrationConfig {
 
     @Bean
     public Step memberRegistrationStep(
-            JdbcCursorItemReader<MemberBatchDto> reader,
+            JdbcPagingItemReader<MemberBatchDto> reader,
             ItemProcessor<MemberBatchDto, MemberBatchDto> processor,
             JdbcBatchItemWriter<MemberBatchDto> writer
     ) {
@@ -86,7 +86,7 @@ public class JdbcMemberRegistrationConfig {
                 .dataSource(dataSource)
                 .pageSize(10)
                 .queryProvider(pagingQueryProvider(dataSource)) // 커스텀 PagingQueryProvider 적용
-                .parameterValues(Map.of("status", "READY", "requested_at", LocalDateTime.now()))
+                .parameterValues(Map.of("status", "READY", "requestedAt", LocalDateTime.now()))
                 .beanRowMapper(MemberBatchDto.class)
                 .build();
     }
@@ -95,7 +95,7 @@ public class JdbcMemberRegistrationConfig {
         SqlPagingQueryProviderFactoryBean queryProviderFactory = new SqlPagingQueryProviderFactoryBean();
         queryProviderFactory.setDataSource(dataSource); // 데이터베이스 타입에 맞는 적절한 PagingQueryProvider 구현체를 생성할 수 있도록 dataSource를 전달해줘야 한다.
 
-        queryProviderFactory.setSelectClause("SELECT member_batch_id as id, requested_at, status, updated_at");
+        queryProviderFactory.setSelectClause("SELECT member_batch_id AS id, requested_at, status, updated_at");
         queryProviderFactory.setFromClause("FROM member_batch");
         queryProviderFactory.setWhereClause("WHERE requested_at <= :requestedAt AND member_batch.status = :status");
         queryProviderFactory.setSortKeys(Map.of("member_batch_id", Order.ASCENDING));
@@ -106,10 +106,8 @@ public class JdbcMemberRegistrationConfig {
     @Bean
     public ItemProcessor<MemberBatchDto, MemberBatchDto> memberItemProcessor() {
         return member -> {
-            if (member.getStatus().equals(MemberStatus.READY)) {
-                member.setStatus(MemberStatus.DONE);
-                member.setUpdatedAt(LocalDateTime.now());
-            }
+            member.setStatus(MemberStatus.DONE);
+            member.setUpdatedAt(LocalDateTime.now());
             return member;
         };
     }
