@@ -2,6 +2,8 @@ package com.example.batch.job.member;
 
 import com.example.batch.code.MemberStatus;
 import com.example.batch.domain.MemberBatch;
+import com.example.batch.job.member.listener.MemberChunkListener;
+import com.example.batch.job.member.listener.MemberJobListener;
 import jakarta.persistence.EntityManagerFactory;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -39,6 +41,7 @@ public class JpaMemberRegistrationConfig {
     public Job memberRegistrationJpaJob(Step memberRegistrationJpaStep) {
         return new JobBuilder("memberRegistrationJpaJob", jobRepository)
                 .start(memberRegistrationJpaStep)
+                .listener(new MemberJobListener())
                 .build();
     }
 
@@ -53,6 +56,7 @@ public class JpaMemberRegistrationConfig {
                 .reader(reader)
                 .processor(processor)
                 .writer(writer)
+                .listener(new MemberChunkListener())
                 .build();
     }
 

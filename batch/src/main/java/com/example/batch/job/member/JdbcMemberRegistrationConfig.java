@@ -1,9 +1,10 @@
 package com.example.batch.job.member;
 
 import com.example.batch.code.MemberStatus;
-import com.example.batch.domain.MemberBatch;
 import com.example.batch.dto.MemberBatchDto;
-import com.example.batch.dto.OrderBatchDto;
+import com.example.batch.job.member.listener.MemberChunkListener;
+import com.example.batch.job.member.listener.MemberJobListener;
+import com.example.batch.job.member.listener.MemberStepListener;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.core.Job;
@@ -37,16 +38,28 @@ public class JdbcMemberRegistrationConfig {
 
     //./gradlew bootRun --args='--spring.batch.job.name=memberRegistrationJob'
 
+    //// 이런 코드에 현혹되지 마라
+    //@Override
+    //public void beforeJob(JobExecution jobExecution) {
+    //    jobExecution.getExecutionContext()
+    //        .put("targetDate", LocalDate.now()); // 치명적인 실수다
+    //}
+
+    //->JobParameter
+
+    // 리스너는 감시와 통제만 담당
+
     @Bean
     public Job memberRegistrationJob(Step memberRegistrationStep) {
         return new JobBuilder("memberRegistrationJob", jobRepository)
                 .start(memberRegistrationStep)
+                .listener(new MemberJobListener())
                 .build();
     }
 
     @Bean
     public Step memberRegistrationStep(
-            JdbcPagingItemReader<MemberBatchDto> reader,
+            JdbcCursorItemReader<MemberBatchDto> reader,
             ItemProcessor<MemberBatchDto, MemberBatchDto> processor,
             JdbcBatchItemWriter<MemberBatchDto> writer
     ) {
@@ -55,6 +68,7 @@ public class JdbcMemberRegistrationConfig {
                 .reader(reader)
                 .processor(processor)
                 .writer(writer)
+                .listener(new MemberChunkListener())
                 .build();
     }
 
