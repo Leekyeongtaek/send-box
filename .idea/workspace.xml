@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95680bc3-4f7a-4703-953b-294295a2b3dd" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/DateUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="95680bc3-4f7a-4703-953b-294295a2b3dd" name="변경" comment="feat: member 배치 5만 건 chunk 처리 학습">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/dto/MemberBatchDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/dto/MemberBatchDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/member/JdbcMemberRegistrationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/member/JdbcMemberRegistrationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/member/JpaMemberRegistrationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/member/JpaMemberRegistrationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/batch/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -446,7 +443,7 @@
       <workItem from="1765330442363" duration="12947000" />
       <workItem from="1765511539525" duration="1000" />
       <workItem from="1765530147592" duration="1847000" />
-      <workItem from="1765588928001" duration="4277000" />
+      <workItem from="1765588928001" duration="5055000" />
     </task>
     <task id="LOCAL-00001" summary="test: 배치 강의 연습">
       <option name="closed" value="true" />
@@ -576,7 +573,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765362703258</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="feat: member 배치 5만 건 chunk 처리 학습">
+      <option name="closed" value="true" />
+      <created>1765593242872</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1765593242872</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -622,6 +627,7 @@
     <MESSAGE value="feat: 회원 등록 승인 기능 jdbc 버전" />
     <MESSAGE value="feat: jpa 버전 회원 가입 인증 기능" />
     <MESSAGE value="feat: 리스너 기능 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 리스너 기능 추가" />
+    <MESSAGE value="feat: member 배치 5만 건 chunk 처리 학습" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: member 배치 5만 건 chunk 처리 학습" />
   </component>
 </project>

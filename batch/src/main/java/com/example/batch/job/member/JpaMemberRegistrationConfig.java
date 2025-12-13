@@ -2,6 +2,7 @@ package com.example.batch.job.member;
 
 import com.example.batch.code.MemberStatus;
 import com.example.batch.domain.MemberBatch;
+import com.example.batch.job.DateUtil;
 import com.example.batch.job.member.listener.MemberChunkListener;
 import com.example.batch.job.member.listener.MemberJobListener;
 import jakarta.persistence.EntityManagerFactory;
@@ -9,6 +10,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
+import org.springframework.batch.core.configuration.annotation.StepScope;
 import org.springframework.batch.core.job.builder.JobBuilder;
 import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.batch.core.step.builder.StepBuilder;
@@ -19,6 +21,7 @@ import org.springframework.batch.item.database.JpaPagingItemReader;
 import org.springframework.batch.item.database.builder.JpaCursorItemReaderBuilder;
 import org.springframework.batch.item.database.builder.JpaItemWriterBuilder;
 import org.springframework.batch.item.database.builder.JpaPagingItemReaderBuilder;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.transaction.PlatformTransactionManager;
@@ -35,7 +38,7 @@ public class JpaMemberRegistrationConfig {
     private final PlatformTransactionManager transactionManager;
     private final EntityManagerFactory entityManagerFactory;
 
-    //./gradlew bootRun --args='--spring.batch.job.name=memberRegistrationJpaJob'
+    //./gradlew bootRun --args='--spring.batch.job.name=memberRegistrationJpaJob requestedAtStr=2025-12-13T23:59:59'
 
     @Bean
     public Job memberRegistrationJpaJob(Step memberRegistrationJpaStep) {
@@ -47,12 +50,12 @@ public class JpaMemberRegistrationConfig {
 
     @Bean
     public Step memberRegistrationJpaStep(
-            JpaPagingItemReader<MemberBatch> reader,
+            JpaCursorItemReader<MemberBatch> reader,
             ItemProcessor<MemberBatch, MemberBatch> processor,
             JpaItemWriter<MemberBatch> writer
     ) {
         return new StepBuilder("memberRegistrationJpaStep", jobRepository)
-                .<MemberBatch, MemberBatch>chunk(10, transactionManager)
+                .<MemberBatch, MemberBatch>chunk(5000, transactionManager)
                 .reader(reader)
                 .processor(processor)
                 .writer(writer)
@@ -61,7 +64,12 @@ public class JpaMemberRegistrationConfig {
     }
 
     @Bean
-    public JpaCursorItemReader<MemberBatch> memberJpaCursorReader() {
+    @StepScope
+    public JpaCursorItemReader<MemberBatch> memberJpaCursorReader(
+            @Value("#{jobParameters['requestedAtStr']}") String requestedAtStr) {
+
+        LocalDateTime requestedAt = DateUtil.parseToLocalDateTime(requestedAtStr);
+
         return new JpaCursorItemReaderBuilder<MemberBatch>()
                 .name("memberJpaCursorReader")
                 .entityManagerFactory(entityManagerFactory)
@@ -72,14 +80,19 @@ public class JpaMemberRegistrationConfig {
                         ORDER BY m.id ASC
                         """)
                 .parameterValues(Map.of(
-                        "requestedAt", LocalDateTime.now(),
+                        "requestedAt", requestedAt,
                         "status", MemberStatus.READY
                 ))
                 .build();
     }
 
     @Bean
-    public JpaPagingItemReader<MemberBatch> memberJpaPagingReader() {
+    @StepScope
+    public JpaPagingItemReader<MemberBatch> memberJpaPagingReader(
+            @Value("#{jobParameters['requestedAtStr']}") String requestedAtStr) {
+
+        LocalDateTime requestedAt = DateUtil.parseToLocalDateTime(requestedAtStr);
+
         return new JpaPagingItemReaderBuilder<MemberBatch>()
                 .name("memberJpaPagingReader")
                 .entityManagerFactory(entityManagerFactory)
@@ -90,10 +103,10 @@ public class JpaMemberRegistrationConfig {
                         ORDER BY m.id ASC
                         """)
                 .parameterValues(Map.of(
-                        "requestedAt", LocalDateTime.now(),
+                        "requestedAt", requestedAt,
                         "status", MemberStatus.READY
                 ))
-                .pageSize(10)
+                .pageSize(5000)
                 .build();
     }
 
