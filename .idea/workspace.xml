@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95680bc3-4f7a-4703-953b-294295a2b3dd" name="변경" comment="feat: jpa 버전 회원 가입 인증 기능">
-      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/member/listener/MemberChunkListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/member/listener/MemberJobListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/member/listener/MemberStepListener.java" afterDir="false" />
+    <list default="true" id="95680bc3-4f7a-4703-953b-294295a2b3dd" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/DateUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/dto/MemberBatchDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/dto/MemberBatchDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/member/JdbcMemberRegistrationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/member/JdbcMemberRegistrationConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/member/JpaMemberRegistrationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/member/JpaMemberRegistrationConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +193,7 @@
     &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/myhome/Desktop/send-box&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/myhome/Desktop/1.programming/2.project/send-box&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -443,7 +443,10 @@
       <workItem from="1765069445785" duration="15299000" />
       <workItem from="1765167378724" duration="29464000" />
       <workItem from="1765271918480" duration="14539000" />
-      <workItem from="1765330442363" duration="12698000" />
+      <workItem from="1765330442363" duration="12947000" />
+      <workItem from="1765511539525" duration="1000" />
+      <workItem from="1765530147592" duration="1847000" />
+      <workItem from="1765588928001" duration="4277000" />
     </task>
     <task id="LOCAL-00001" summary="test: 배치 강의 연습">
       <option name="closed" value="true" />
@@ -565,7 +568,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765344470614</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="feat: 리스너 기능 추가">
+      <option name="closed" value="true" />
+      <created>1765362703258</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1765362703258</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -610,6 +621,7 @@
     <MESSAGE value="refactor: 네이밍 변경" />
     <MESSAGE value="feat: 회원 등록 승인 기능 jdbc 버전" />
     <MESSAGE value="feat: jpa 버전 회원 가입 인증 기능" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: jpa 버전 회원 가입 인증 기능" />
+    <MESSAGE value="feat: 리스너 기능 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 리스너 기능 추가" />
   </component>
 </project>

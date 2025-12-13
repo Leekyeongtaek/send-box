@@ -2,13 +2,14 @@ package com.example.batch.job.member;
 
 import com.example.batch.code.MemberStatus;
 import com.example.batch.dto.MemberBatchDto;
+import com.example.batch.job.DateUtil;
 import com.example.batch.job.member.listener.MemberChunkListener;
 import com.example.batch.job.member.listener.MemberJobListener;
-import com.example.batch.job.member.listener.MemberStepListener;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
+import org.springframework.batch.core.configuration.annotation.StepScope;
 import org.springframework.batch.core.job.builder.JobBuilder;
 import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.batch.core.step.builder.StepBuilder;
@@ -18,6 +19,7 @@ import org.springframework.batch.item.database.builder.JdbcBatchItemWriterBuilde
 import org.springframework.batch.item.database.builder.JdbcCursorItemReaderBuilder;
 import org.springframework.batch.item.database.builder.JdbcPagingItemReaderBuilder;
 import org.springframework.batch.item.database.support.SqlPagingQueryProviderFactoryBean;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.transaction.PlatformTransactionManager;
@@ -36,9 +38,9 @@ public class JdbcMemberRegistrationConfig {
     private final PlatformTransactionManager transactionManager;
     private final DataSource dataSource;
 
-    //./gradlew bootRun --args='--spring.batch.job.name=memberRegistrationJob'
+    //./gradlew bootRun --args='--spring.batch.job.name=memberRegistrationJob requestedAtStr=2025-12-13T23:59:59'
 
-    //// 이런 코드에 현혹되지 마라
+    // 이런 코드에 현혹되지 마라
     //@Override
     //public void beforeJob(JobExecution jobExecution) {
     //    jobExecution.getExecutionContext()
@@ -46,7 +48,6 @@ public class JdbcMemberRegistrationConfig {
     //}
 
     //->JobParameter
-
     // 리스너는 감시와 통제만 담당
 
     @Bean
@@ -59,12 +60,12 @@ public class JdbcMemberRegistrationConfig {
 
     @Bean
     public Step memberRegistrationStep(
-            JdbcCursorItemReader<MemberBatchDto> reader,
+            JdbcPagingItemReader<MemberBatchDto> reader,
             ItemProcessor<MemberBatchDto, MemberBatchDto> processor,
             JdbcBatchItemWriter<MemberBatchDto> writer
     ) {
         return new StepBuilder("memberRegistrationStep", jobRepository)
-                .<MemberBatchDto, MemberBatchDto>chunk(10, transactionManager) // 최대 16KB(8192 char array)만큼의 데이터를 버퍼에 저장
+                .<MemberBatchDto, MemberBatchDto>chunk(5000, transactionManager) // 최대 16KB(8192 char array)만큼의 데이터를 버퍼에 저장
                 .reader(reader)
                 .processor(processor)
                 .writer(writer)
@@ -73,7 +74,12 @@ public class JdbcMemberRegistrationConfig {
     }
 
     @Bean
-    public JdbcCursorItemReader<MemberBatchDto> memberJdbcCursorReader() {
+    @StepScope
+    public JdbcCursorItemReader<MemberBatchDto> memberJdbcCursorReader(
+            @Value("#{jobParameters['requestedAtStr']}") String requestedAtStr) {
+
+        LocalDateTime requestedAt = DateUtil.parseToLocalDateTime(requestedAtStr);
+
         return new JdbcCursorItemReaderBuilder<MemberBatchDto>()
                 .name("memberJdbcCursorReader")
                 .dataSource(dataSource)
@@ -87,20 +93,25 @@ public class JdbcMemberRegistrationConfig {
                         WHERE mb.requested_at <= ? and mb.status = ?
                         ORDER BY mb.member_batch_id
                         """)
-                .queryArguments(List.of(LocalDateTime.now(), "READY"))
+                .queryArguments(List.of(requestedAt, "READY"))
                 .beanRowMapper(MemberBatchDto.class)
-                .fetchSize(10)
+                .fetchSize(5000)
                 .build();
     }
 
     @Bean
-    public JdbcPagingItemReader<MemberBatchDto> memberJdbcPagingReader() throws Exception {
+    @StepScope
+    public JdbcPagingItemReader<MemberBatchDto> memberJdbcPagingReader(
+            @Value("#{jobParameters['requestedAtStr']}") String requestedAtStr) throws Exception {
+
+        LocalDateTime requestedAt = DateUtil.parseToLocalDateTime(requestedAtStr);
+        log.info("requestedAt = {}", requestedAt);
         return new JdbcPagingItemReaderBuilder<MemberBatchDto>()
                 .name("memberJdbcPagingReader")
                 .dataSource(dataSource)
-                .pageSize(10)
+                .pageSize(5000)
                 .queryProvider(pagingQueryProvider(dataSource)) // 커스텀 PagingQueryProvider 적용
-                .parameterValues(Map.of("status", "READY", "requestedAt", LocalDateTime.now()))
+                .parameterValues(Map.of("status", "READY", "requestedAt", requestedAt))
                 .beanRowMapper(MemberBatchDto.class)
                 .build();
     }
@@ -109,7 +120,7 @@ public class JdbcMemberRegistrationConfig {
         SqlPagingQueryProviderFactoryBean queryProviderFactory = new SqlPagingQueryProviderFactoryBean();
         queryProviderFactory.setDataSource(dataSource); // 데이터베이스 타입에 맞는 적절한 PagingQueryProvider 구현체를 생성할 수 있도록 dataSource를 전달해줘야 한다.
 
-        queryProviderFactory.setSelectClause("SELECT member_batch_id AS id, requested_at, status, updated_at");
+        queryProviderFactory.setSelectClause("SELECT member_batch_id, requested_at, status, updated_at");
         queryProviderFactory.setFromClause("FROM member_batch");
         queryProviderFactory.setWhereClause("WHERE requested_at <= :requestedAt AND member_batch.status = :status");
         queryProviderFactory.setSortKeys(Map.of("member_batch_id", Order.ASCENDING));
@@ -134,7 +145,7 @@ public class JdbcMemberRegistrationConfig {
                             UPDATE member_batch
                             SET status = :statusName,
                                 updated_at = :updatedAt
-                            WHERE member_batch_id = :id
+                            WHERE member_batch_id = :memberBatchId
                         """)
                 .beanMapped()
                 .assertUpdates(true)

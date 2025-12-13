@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Builder
 public class MemberBatchDto {
-    private Long id;
+    private Long memberBatchId;
     private String email;
     private LocalDateTime requestedAt;
     private MemberStatus status;
