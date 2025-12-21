@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95680bc3-4f7a-4703-953b-294295a2b3dd" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/common/MemberException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/common/MemberSkipException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-kill/src/main/java/com/example/batchkill/config/InFearLearnStudentsBrainWashJobConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-kill/src/test/java/com/example/batchkill/InFearLearnStudentsBrainWashJobTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-kill/src/test/resources/application-test.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-kill/src/test/resources/expected_brainwashed_victims.jsonl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch-kill/src/test/resources/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/DateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/DateUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/member/JdbcMemberRegistrationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/member/JdbcMemberRegistrationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/batch-kill/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/batch-kill/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,6 +162,8 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Gradle.InFearLearnStudentsBrainWashJobTest.shouldExecuteBrainwashStepAndVerifyOutput.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.InFearLearnStudentsBrainWashJobTest.shouldLaunchJobSuccessfully.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.api-gateway 빌드.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.eureka 빌드.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.member 빌드.executor&quot;: &quot;Run&quot;,
@@ -255,7 +260,55 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.send-box:batch [build]">
+  <component name="RunManager" selected="Gradle.InFearLearnStudentsBrainWashJobTest.shouldExecuteBrainwashStepAndVerifyOutput">
+    <configuration name="InFearLearnStudentsBrainWashJobTest.shouldExecuteBrainwashStepAndVerifyOutput" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":batch-kill:test" />
+            <option value="--tests" />
+            <option value="&quot;com.example.batchkill.InFearLearnStudentsBrainWashJobTest.shouldExecuteBrainwashStepAndVerifyOutput&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="InFearLearnStudentsBrainWashJobTest.shouldLaunchJobSuccessfully" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":batch-kill:test" />
+            <option value="--tests" />
+            <option value="&quot;com.example.batchkill.InFearLearnStudentsBrainWashJobTest.shouldLaunchJobSuccessfully&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="send-box:batch [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -268,50 +321,6 @@
         <option name="taskNames">
           <list>
             <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="send-box:ordering [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/ordering" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="send-box:ordering [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/ordering" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -392,11 +401,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.InFearLearnStudentsBrainWashJobTest.shouldExecuteBrainwashStepAndVerifyOutput" />
+        <item itemvalue="Gradle.InFearLearnStudentsBrainWashJobTest.shouldLaunchJobSuccessfully" />
         <item itemvalue="Gradle.send-box:batch [build]" />
         <item itemvalue="Spring Boot.ApiGatewayApplication" />
         <item itemvalue="Spring Boot.EurekaApplication" />
-        <item itemvalue="Gradle.send-box:ordering [build]" />
-        <item itemvalue="Gradle.send-box:ordering [clean]" />
       </list>
     </recent_temporary>
   </component>
@@ -447,6 +456,8 @@
       <workItem from="1765530147592" duration="1847000" />
       <workItem from="1765588928001" duration="10940000" />
       <workItem from="1765677187841" duration="14089000" />
+      <workItem from="1765850663412" duration="19502000" />
+      <workItem from="1766295621183" duration="519000" />
     </task>
     <task id="LOCAL-00001" summary="test: 배치 강의 연습">
       <option name="closed" value="true" />
@@ -592,7 +603,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765594166873</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="feat: 배치 재시도, 스킵 기능 학습">
+      <option name="closed" value="true" />
+      <created>1765850695949</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1765850695949</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -640,6 +659,7 @@
     <MESSAGE value="feat: 리스너 기능 추가" />
     <MESSAGE value="feat: member 배치 5만 건 chunk 처리 학습" />
     <MESSAGE value="feat: jpa 5만 건 기능 학습" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: jpa 5만 건 기능 학습" />
+    <MESSAGE value="feat: 배치 재시도, 스킵 기능 학습" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 배치 재시도, 스킵 기능 학습" />
   </component>
 </project>
