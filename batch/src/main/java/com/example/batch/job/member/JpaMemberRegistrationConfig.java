@@ -30,7 +30,7 @@ import java.time.LocalDateTime;
 import java.util.Map;
 
 @Slf4j
-@Configuration
+//@Configuration
 @RequiredArgsConstructor
 public class JpaMemberRegistrationConfig {
 
@@ -40,89 +40,89 @@ public class JpaMemberRegistrationConfig {
 
     //./gradlew bootRun --args='--spring.batch.job.name=memberRegistrationJpaJob requestedAtStr=2025-12-13T23:59:59'
 
-    @Bean
-    public Job memberRegistrationJpaJob(Step memberRegistrationJpaStep) {
-        return new JobBuilder("memberRegistrationJpaJob", jobRepository)
-                .start(memberRegistrationJpaStep)
-                .listener(new MemberJobListener())
-                .build();
-    }
-
-    @Bean
-    public Step memberRegistrationJpaStep(
-            JpaCursorItemReader<MemberBatch> reader,
-            ItemProcessor<MemberBatch, MemberBatch> processor,
-            JpaItemWriter<MemberBatch> writer
-    ) {
-        return new StepBuilder("memberRegistrationJpaStep", jobRepository)
-                .<MemberBatch, MemberBatch>chunk(5000, transactionManager)
-                .reader(reader)
-                .processor(processor)
-                .writer(writer)
-                .listener(new MemberChunkListener())
-                .build();
-    }
-
-    @Bean
-    @StepScope
-    public JpaCursorItemReader<MemberBatch> memberJpaCursorReader(
-            @Value("#{jobParameters['requestedAtStr']}") String requestedAtStr) {
-
-        LocalDateTime requestedAt = DateUtil.parseToLocalDateTime(requestedAtStr);
-
-        return new JpaCursorItemReaderBuilder<MemberBatch>()
-                .name("memberJpaCursorReader")
-                .entityManagerFactory(entityManagerFactory)
-                .queryString("""
-                        SELECT m
-                        FROM MemberBatch m
-                        WHERE m.requestedAt <= :requestedAt AND m.status = :status
-                        ORDER BY m.id ASC
-                        """)
-                .parameterValues(Map.of(
-                        "requestedAt", requestedAt,
-                        "status", MemberStatus.READY
-                ))
-                .build();
-    }
-
-    @Bean
-    @StepScope
-    public JpaPagingItemReader<MemberBatch> memberJpaPagingReader(
-            @Value("#{jobParameters['requestedAtStr']}") String requestedAtStr) {
-
-        LocalDateTime requestedAt = DateUtil.parseToLocalDateTime(requestedAtStr);
-
-        return new JpaPagingItemReaderBuilder<MemberBatch>()
-                .name("memberJpaPagingReader")
-                .entityManagerFactory(entityManagerFactory)
-                .queryString("""
-                        SELECT m
-                        FROM MemberBatch m
-                        WHERE m.requestedAt <= :requestedAt AND m.status = :status
-                        ORDER BY m.id ASC
-                        """)
-                .parameterValues(Map.of(
-                        "requestedAt", requestedAt,
-                        "status", MemberStatus.READY
-                ))
-                .pageSize(5000)
-                .build();
-    }
-
-    @Bean
-    public ItemProcessor<MemberBatch, MemberBatch> memberItemJpaProcessor() {
-        return member -> {
-            member.done();
-            return member;
-        };
-    }
-
-    @Bean
-    public JpaItemWriter<MemberBatch> memberJpaWriter() {
-        return new JpaItemWriterBuilder<MemberBatch>()
-                .entityManagerFactory(entityManagerFactory)
-                .usePersist(false) // 엔티티 저장 시 persist()를 사용할지 merge()를 사용할 지 여부 결정
-                .build();
-    }
+//    @Bean
+//    public Job memberRegistrationJpaJob(Step memberRegistrationJpaStep) {
+//        return new JobBuilder("memberRegistrationJpaJob", jobRepository)
+//                .start(memberRegistrationJpaStep)
+//                .listener(new MemberJobListener())
+//                .build();
+//    }
+//
+//    @Bean
+//    public Step memberRegistrationJpaStep(
+//            JpaCursorItemReader<MemberBatch> reader,
+//            ItemProcessor<MemberBatch, MemberBatch> processor,
+//            JpaItemWriter<MemberBatch> writer
+//    ) {
+//        return new StepBuilder("memberRegistrationJpaStep", jobRepository)
+//                .<MemberBatch, MemberBatch>chunk(5000, transactionManager)
+//                .reader(reader)
+//                .processor(processor)
+//                .writer(writer)
+//                .listener(new MemberChunkListener())
+//                .build();
+//    }
+//
+//    @Bean
+//    @StepScope
+//    public JpaCursorItemReader<MemberBatch> memberJpaCursorReader(
+//            @Value("#{jobParameters['requestedAtStr']}") String requestedAtStr) {
+//
+//        LocalDateTime requestedAt = DateUtil.parseToLocalDateTime(requestedAtStr);
+//
+//        return new JpaCursorItemReaderBuilder<MemberBatch>()
+//                .name("memberJpaCursorReader")
+//                .entityManagerFactory(entityManagerFactory)
+//                .queryString("""
+//                        SELECT m
+//                        FROM MemberBatch m
+//                        WHERE m.requestedAt <= :requestedAt AND m.status = :status
+//                        ORDER BY m.id ASC
+//                        """)
+//                .parameterValues(Map.of(
+//                        "requestedAt", requestedAt,
+//                        "status", MemberStatus.READY
+//                ))
+//                .build();
+//    }
+//
+//    @Bean
+//    @StepScope
+//    public JpaPagingItemReader<MemberBatch> memberJpaPagingReader(
+//            @Value("#{jobParameters['requestedAtStr']}") String requestedAtStr) {
+//
+//        LocalDateTime requestedAt = DateUtil.parseToLocalDateTime(requestedAtStr);
+//
+//        return new JpaPagingItemReaderBuilder<MemberBatch>()
+//                .name("memberJpaPagingReader")
+//                .entityManagerFactory(entityManagerFactory)
+//                .queryString("""
+//                        SELECT m
+//                        FROM MemberBatch m
+//                        WHERE m.requestedAt <= :requestedAt AND m.status = :status
+//                        ORDER BY m.id ASC
+//                        """)
+//                .parameterValues(Map.of(
+//                        "requestedAt", requestedAt,
+//                        "status", MemberStatus.READY
+//                ))
+//                .pageSize(5000)
+//                .build();
+//    }
+//
+//    @Bean
+//    public ItemProcessor<MemberBatch, MemberBatch> memberItemJpaProcessor() {
+//        return member -> {
+//            member.done();
+//            return member;
+//        };
+//    }
+//
+//    @Bean
+//    public JpaItemWriter<MemberBatch> memberJpaWriter() {
+//        return new JpaItemWriterBuilder<MemberBatch>()
+//                .entityManagerFactory(entityManagerFactory)
+//                .usePersist(false) // 엔티티 저장 시 persist()를 사용할지 merge()를 사용할 지 여부 결정
+//                .build();
+//    }
 }

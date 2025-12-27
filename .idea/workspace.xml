@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95680bc3-4f7a-4703-953b-294295a2b3dd" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/batch-kill/src/main/java/com/example/batchkill/config/InFearLearnStudentsBrainWashJobConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch-kill/src/test/java/com/example/batchkill/InFearLearnStudentsBrainWashJobTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch-kill/src/test/resources/application-test.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch-kill/src/test/resources/expected_brainwashed_victims.jsonl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch-kill/src/test/resources/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/practice/SampleConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/batch/src/test/resources/application-test.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch-kill/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/batch-kill/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/batch/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/batch/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/dto/OrderBatchDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/dto/OrderBatchDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/member/JdbcMemberRegistrationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/member/JdbcMemberRegistrationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/member/JpaMemberRegistrationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/member/JpaMemberRegistrationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/orders/JdbcOrdersDailySummaryJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/orders/JdbcOrdersDailySummaryJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/orders/JpaOrdersDailySummaryJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/orders/JpaOrdersDailySummaryJob.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +82,9 @@
           <activation />
         </task>
         <task path="$PROJECT_DIR$/batch">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$">
           <activation />
         </task>
         <projects_view>
@@ -162,6 +166,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Gradle.BatchApplicationTests.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.InFearLearnStudentsBrainWashJobTest.shouldExecuteBrainwashStepAndVerifyOutput.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.InFearLearnStudentsBrainWashJobTest.shouldLaunchJobSuccessfully.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.api-gateway 빌드.executor&quot;: &quot;Run&quot;,
@@ -170,6 +175,7 @@
     &quot;Gradle.ordering 빌드.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.product 빌드.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.send-box 빌드.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.send-box:batch [bootJar].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.send-box:batch [build].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.send-box:common [build].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.send-box:ordering [build].executor&quot;: &quot;Run&quot;,
@@ -197,7 +203,7 @@
     &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/myhome/Desktop/1.programming/2.project/send-box&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/myhome/Desktop/1.programming/2.project/send-box/batch/src/test/resources&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -218,6 +224,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/batch/src/test/resources" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/ordering/src/main/java/com/example/common" />
     </key>
@@ -248,10 +255,8 @@
         <entry key="SpringBootApplicationConfigurationType">
           <value>
             <map>
-              <entry key="ApiGatewayApplication" value="STOPPED" />
               <entry key="BatchApplication" value="STOPPED" />
               <entry key="BatchKillApplication" value="STOPPED" />
-              <entry key="EurekaApplication" value="STOPPED" />
               <entry key="OrderingApplication" value="STOPPED" />
               <entry key="ProductApplication" value="STOPPED" />
             </map>
@@ -260,7 +265,31 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.InFearLearnStudentsBrainWashJobTest.shouldExecuteBrainwashStepAndVerifyOutput">
+  <component name="RunManager" selected="Gradle.BatchApplicationTests">
+    <configuration name="BatchApplicationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":batch:test" />
+            <option value="--tests" />
+            <option value="&quot;com.example.batch.BatchApplicationTests&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="InFearLearnStudentsBrainWashJobTest.shouldExecuteBrainwashStepAndVerifyOutput" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -309,6 +338,28 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="send-box:batch [bootJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/batch" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="send-box:batch [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -331,19 +382,6 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="send-box.api-gateway.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.apigateway.ApiGatewayApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.apigateway.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BatchApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="send-box.batch.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.batch.BatchApplication" />
@@ -365,15 +403,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="EurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="send-box.eureka.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.eureka.EurekaApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.eureka.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -401,11 +433,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.BatchApplicationTests" />
+        <item itemvalue="Gradle.send-box:batch [build]" />
+        <item itemvalue="Gradle.send-box:batch [bootJar]" />
         <item itemvalue="Gradle.InFearLearnStudentsBrainWashJobTest.shouldExecuteBrainwashStepAndVerifyOutput" />
         <item itemvalue="Gradle.InFearLearnStudentsBrainWashJobTest.shouldLaunchJobSuccessfully" />
-        <item itemvalue="Gradle.send-box:batch [build]" />
-        <item itemvalue="Spring Boot.ApiGatewayApplication" />
-        <item itemvalue="Spring Boot.EurekaApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -457,7 +489,7 @@
       <workItem from="1765588928001" duration="10940000" />
       <workItem from="1765677187841" duration="14089000" />
       <workItem from="1765850663412" duration="19502000" />
-      <workItem from="1766295621183" duration="519000" />
+      <workItem from="1766295621183" duration="7854000" />
     </task>
     <task id="LOCAL-00001" summary="test: 배치 강의 연습">
       <option name="closed" value="true" />
@@ -611,7 +643,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765850695949</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="test: 배치 테스트 코드 학습">
+      <option name="closed" value="true" />
+      <created>1766296173016</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1766296173016</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -660,6 +700,7 @@
     <MESSAGE value="feat: member 배치 5만 건 chunk 처리 학습" />
     <MESSAGE value="feat: jpa 5만 건 기능 학습" />
     <MESSAGE value="feat: 배치 재시도, 스킵 기능 학습" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 배치 재시도, 스킵 기능 학습" />
+    <MESSAGE value="test: 배치 테스트 코드 학습" />
+    <option name="LAST_COMMIT_MESSAGE" value="test: 배치 테스트 코드 학습" />
   </component>
 </project>
