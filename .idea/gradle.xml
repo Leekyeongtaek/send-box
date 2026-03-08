@@ -9,13 +9,16 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/api-gateway" />
-            <option value="$PROJECT_DIR$/batch" />
-            <option value="$PROJECT_DIR$/batch-kill" />
-            <option value="$PROJECT_DIR$/configserver" />
             <option value="$PROJECT_DIR$/eureka" />
-            <option value="$PROJECT_DIR$/member" />
-            <option value="$PROJECT_DIR$/ordering" />
-            <option value="$PROJECT_DIR$/product" />
+            <option value="$PROJECT_DIR$/stock-service" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/stock" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/stock" />
           </set>
         </option>
       </GradleProjectSettings>

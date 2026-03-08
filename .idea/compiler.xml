@@ -7,19 +7,7 @@
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.36/5a30490a6e14977d97d9c73c924c1f1b5311ea95/lombok-1.18.36.jar" />
         </processorPath>
-        <module name="send-box.ordering.main" />
-        <module name="send-box.product.main" />
-        <module name="send-box.member.main" />
-      </profile>
-      <profile name="Gradle Imported" enabled="true">
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.42/8365263844ebb62398e0dc33057ba10ba472d3b8/lombok-1.18.42.jar" />
-        </processorPath>
-        <module name="send-box.batch-kill.main" />
-        <module name="send-box.batch.main" />
-        <module name="send-box.batch-kill.test" />
-        <module name="send-box.batch.test" />
+        <module name="stock.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="17" />
@@ -32,6 +20,9 @@
       <module name="common-event.test" options="" />
       <module name="common.main" options="-parameters" />
       <module name="common.test" options="-parameters" />
+      <module name="practice" options="-parameters" />
+      <module name="practice.main" options="-parameters" />
+      <module name="practice.test" options="-parameters" />
       <module name="send-box.api-gateway" options="-parameters" />
       <module name="send-box.api-gateway.main" options="-parameters" />
       <module name="send-box.api-gateway.test" options="-parameters" />
@@ -56,6 +47,15 @@
       <module name="send-box.product" options="-parameters" />
       <module name="send-box.product.main" options="-parameters" />
       <module name="send-box.product.test" options="-parameters" />
+      <module name="send-box.stock-api" options="-parameters" />
+      <module name="send-box.stock-api.main" options="-parameters" />
+      <module name="send-box.stock-api.test" options="-parameters" />
+      <module name="stock" options="-parameters" />
+      <module name="stock-api" options="-parameters" />
+      <module name="stock-api.main" options="-parameters" />
+      <module name="stock-api.test" options="-parameters" />
+      <module name="stock.main" options="-parameters" />
+      <module name="stock.test" options="-parameters" />
     </option>
   </component>
 </project>

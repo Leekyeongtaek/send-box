@@ -5,15 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95680bc3-4f7a-4703-953b-294295a2b3dd" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/practice/SampleConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/batch/src/test/resources/application-test.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/batch-kill/send-box.batch-kill.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/member/send-box.member.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/ordering/send-box.ordering.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/product/send-box.product.main.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/batch/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/dto/OrderBatchDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/dto/OrderBatchDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/member/JdbcMemberRegistrationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/member/JdbcMemberRegistrationConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/member/JpaMemberRegistrationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/member/JpaMemberRegistrationConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/orders/JdbcOrdersDailySummaryJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/orders/JdbcOrdersDailySummaryJob.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/orders/JpaOrdersDailySummaryJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/batch/src/main/java/com/example/batch/job/orders/JpaOrdersDailySummaryJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +67,16 @@
     <projectState path="$PROJECT_DIR$/ordering">
       <ProjectState />
     </projectState>
+    <projectState path="$PROJECT_DIR$/practice">
+      <ProjectState />
+    </projectState>
     <projectState path="$PROJECT_DIR$/product">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/stock">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/stock-api">
       <ProjectState />
     </projectState>
   </component>
@@ -87,30 +98,15 @@
         <task path="$PROJECT_DIR$">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/stock-service">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="send-box" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="send-box" type="f1a62948:ProjectNode" />
-                <item name="batch" type="2d1252cf:ModuleNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="send-box" type="f1a62948:ProjectNode" />
-                <item name="batch" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="send-box" type="f1a62948:ProjectNode" />
-                <item name="batch" type="2d1252cf:ModuleNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -164,64 +160,70 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.BatchApplicationTests.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.InFearLearnStudentsBrainWashJobTest.shouldExecuteBrainwashStepAndVerifyOutput.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.InFearLearnStudentsBrainWashJobTest.shouldLaunchJobSuccessfully.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.api-gateway 빌드.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.eureka 빌드.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.member 빌드.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ordering 빌드.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.product 빌드.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.send-box 빌드.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.send-box:batch [bootJar].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.send-box:batch [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.send-box:common [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.send-box:ordering [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.send-box:ordering [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.소스 다운로드.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;새/업데이트된 데이터베이스 구성이 발견되었습니다&quot;,
-    &quot;Notification.DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.BatchApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.BatchKillApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.CommonEventApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.EurekaApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.MemberApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.OrderingApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ProductApplication.executor&quot;: &quot;Run&quot;,
-    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/myhome/Desktop/1.programming/2.project/send-box/batch/src/test/resources&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;모듈&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.BatchApplicationTests.executor": "Run",
+    "Gradle.InFearLearnStudentsBrainWashJobTest.shouldExecuteBrainwashStepAndVerifyOutput.executor": "Run",
+    "Gradle.InFearLearnStudentsBrainWashJobTest.shouldLaunchJobSuccessfully.executor": "Run",
+    "Gradle.api-gateway 빌드.executor": "Run",
+    "Gradle.eureka 빌드.executor": "Run",
+    "Gradle.member 빌드.executor": "Run",
+    "Gradle.ordering 빌드.executor": "Run",
+    "Gradle.product 빌드.executor": "Run",
+    "Gradle.send-box 빌드.executor": "Run",
+    "Gradle.send-box:batch [bootJar].executor": "Run",
+    "Gradle.send-box:batch [build].executor": "Run",
+    "Gradle.send-box:common [build].executor": "Run",
+    "Gradle.send-box:ordering [build].executor": "Run",
+    "Gradle.send-box:ordering [clean].executor": "Run",
+    "Gradle.stock 빌드.executor": "Run",
+    "Gradle.stock-api 빌드.executor": "Run",
+    "Gradle.소스 다운로드.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found": "새/업데이트된 데이터베이스 구성이 발견되었습니다",
+    "Notification.DoNotAsk-DatabaseConfigFileWatcher.found": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.ApiGatewayApplication.executor": "Run",
+    "Spring Boot.BatchApplication.executor": "Run",
+    "Spring Boot.BatchKillApplication.executor": "Run",
+    "Spring Boot.CommonEventApplication.executor": "Run",
+    "Spring Boot.EurekaApplication.executor": "Run",
+    "Spring Boot.MemberApplication.executor": "Run",
+    "Spring Boot.OrderingApplication.executor": "Run",
+    "Spring Boot.ProductApplication.executor": "Run",
+    "Spring Boot.StockApiApplication (1).executor": "Run",
+    "Spring Boot.StockApiApplication.executor": "Run",
+    "Spring Boot.StockApplication.executor": "Run",
+    "deletionFromPopupRequiresConfirmation": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/myhome/Desktop/1.programming/2.project/send-box/batch/src/test/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/Users/myhome/Desktop/1.programming/2.project/send-box/stock-api/src/Main.java",
+    "project.structure.last.edited": "모듈",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/batch/src/test/resources" />
@@ -255,17 +257,20 @@
         <entry key="SpringBootApplicationConfigurationType">
           <value>
             <map>
+              <entry key="ApiGatewayApplication" value="STOPPED" />
               <entry key="BatchApplication" value="STOPPED" />
               <entry key="BatchKillApplication" value="STOPPED" />
+              <entry key="EurekaApplication" value="STOPPED" />
               <entry key="OrderingApplication" value="STOPPED" />
               <entry key="ProductApplication" value="STOPPED" />
+              <entry key="StockApplication" value="STOPPED" />
             </map>
           </value>
         </entry>
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.BatchApplicationTests">
+  <component name="RunManager" selected="Spring Boot.StockApplication">
     <configuration name="BatchApplicationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -280,54 +285,6 @@
             <option value=":batch:test" />
             <option value="--tests" />
             <option value="&quot;com.example.batch.BatchApplicationTests&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="InFearLearnStudentsBrainWashJobTest.shouldExecuteBrainwashStepAndVerifyOutput" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":batch-kill:test" />
-            <option value="--tests" />
-            <option value="&quot;com.example.batchkill.InFearLearnStudentsBrainWashJobTest.shouldExecuteBrainwashStepAndVerifyOutput&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="InFearLearnStudentsBrainWashJobTest.shouldLaunchJobSuccessfully" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":batch-kill:test" />
-            <option value="--tests" />
-            <option value="&quot;com.example.batchkill.InFearLearnStudentsBrainWashJobTest.shouldLaunchJobSuccessfully&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -382,6 +339,19 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="send-box.api-gateway.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.apigateway.ApiGatewayApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.apigateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BatchApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="send-box.batch.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.batch.BatchApplication" />
@@ -424,6 +394,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PracticeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="practice.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mrlee.practice.PracticeApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProductApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="send-box.product.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.ProductApplication" />
@@ -431,13 +408,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StockApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="stock.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.mrlee.stock.StockApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.mrlee.stock.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.StockApplication" />
+        <item itemvalue="Spring Boot.ApiGatewayApplication" />
         <item itemvalue="Gradle.BatchApplicationTests" />
         <item itemvalue="Gradle.send-box:batch [build]" />
         <item itemvalue="Gradle.send-box:batch [bootJar]" />
-        <item itemvalue="Gradle.InFearLearnStudentsBrainWashJobTest.shouldExecuteBrainwashStepAndVerifyOutput" />
-        <item itemvalue="Gradle.InFearLearnStudentsBrainWashJobTest.shouldLaunchJobSuccessfully" />
       </list>
     </recent_temporary>
   </component>
@@ -490,6 +480,12 @@
       <workItem from="1765677187841" duration="14089000" />
       <workItem from="1765850663412" duration="19502000" />
       <workItem from="1766295621183" duration="7854000" />
+      <workItem from="1766812188192" duration="1308000" />
+      <workItem from="1767162707597" duration="32000" />
+      <workItem from="1767496917564" duration="891000" />
+      <workItem from="1767503533459" duration="39000" />
+      <workItem from="1772934030019" duration="1689000" />
+      <workItem from="1772935904622" duration="1576000" />
     </task>
     <task id="LOCAL-00001" summary="test: 배치 강의 연습">
       <option name="closed" value="true" />
@@ -651,7 +647,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766296173016</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="배치 코드 주석 처리">
+      <option name="closed" value="true" />
+      <created>1766812277280</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1766812277280</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -701,6 +705,18 @@
     <MESSAGE value="feat: jpa 5만 건 기능 학습" />
     <MESSAGE value="feat: 배치 재시도, 스킵 기능 학습" />
     <MESSAGE value="test: 배치 테스트 코드 학습" />
-    <option name="LAST_COMMIT_MESSAGE" value="test: 배치 테스트 코드 학습" />
+    <MESSAGE value="배치 코드 주석 처리" />
+    <option name="LAST_COMMIT_MESSAGE" value="배치 코드 주석 처리" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/stock-api/src/Main.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
