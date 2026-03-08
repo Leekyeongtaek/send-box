@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95680bc3-4f7a-4703-953b-294295a2b3dd" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/batch-kill/send-box.batch-kill.main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/member/send-box.member.main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/ordering/send-box.ordering.main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/product/send-box.product.main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eureka/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+    <list default="true" id="95680bc3-4f7a-4703-953b-294295a2b3dd" name="변경" comment="init stock">
+      <change afterPath="$PROJECT_DIR$/stock/src/main/java/com/mrlee/stock/common/StockDataLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock/src/main/java/com/mrlee/stock/domain/Stock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock/src/main/java/com/mrlee/stock/repository/StockRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/stock/src/main/resources/my.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stock/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/stock/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,6 +225,7 @@
       <recent name="$PROJECT_DIR$/ordering/src/main/java/com/example/common" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/stock/src/main/resources" />
       <recent name="$PROJECT_DIR$/batch-kill/src/main/java/com/example/batchkill/config" />
       <recent name="$PROJECT_DIR$/batch-kill/src/main/java/com/example/batchkill/param" />
       <recent name="$PROJECT_DIR$" />
@@ -485,7 +480,7 @@
       <workItem from="1767496917564" duration="891000" />
       <workItem from="1767503533459" duration="39000" />
       <workItem from="1772934030019" duration="1689000" />
-      <workItem from="1772935904622" duration="1576000" />
+      <workItem from="1772935904622" duration="7580000" />
     </task>
     <task id="LOCAL-00001" summary="test: 배치 강의 연습">
       <option name="closed" value="true" />
@@ -655,7 +650,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766812277280</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="init stock">
+      <option name="closed" value="true" />
+      <created>1772937529128</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1772937529128</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -706,7 +709,8 @@
     <MESSAGE value="feat: 배치 재시도, 스킵 기능 학습" />
     <MESSAGE value="test: 배치 테스트 코드 학습" />
     <MESSAGE value="배치 코드 주석 처리" />
-    <option name="LAST_COMMIT_MESSAGE" value="배치 코드 주석 처리" />
+    <MESSAGE value="init stock" />
+    <option name="LAST_COMMIT_MESSAGE" value="init stock" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
