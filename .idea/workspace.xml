@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95680bc3-4f7a-4703-953b-294295a2b3dd" name="변경" comment="init stock">
-      <change afterPath="$PROJECT_DIR$/stock/src/main/java/com/mrlee/stock/common/StockDataLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock/src/main/java/com/mrlee/stock/domain/Stock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock/src/main/java/com/mrlee/stock/repository/StockRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stock/src/main/resources/my.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stock/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/stock/build.gradle" afterDir="false" />
+    <list default="true" id="95680bc3-4f7a-4703-953b-294295a2b3dd" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/stock/src/main/java/com/mrlee/stock/contoller/StockController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,9 +203,9 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "/Users/myhome/Desktop/1.programming/2.project/send-box/stock-api/src/Main.java",
-    "project.structure.last.edited": "모듈",
+    "project.structure.last.edited": "프로젝트",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "run.configurations.included.in.services": "true",
     "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
@@ -247,13 +245,29 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
+    <option name="hiddenConfigurations">
+      <map>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <set>
+              <option value="BatchApplication" />
+              <option value="BatchKillApplication" />
+              <option value="ConfigserverApplication" />
+              <option value="MemberApplication" />
+              <option value="OrderingApplication" />
+              <option value="PracticeApplication" />
+              <option value="ProductApplication" />
+            </set>
+          </value>
+        </entry>
+      </map>
+    </option>
     <option name="configurationStatuses">
       <map>
         <entry key="SpringBootApplicationConfigurationType">
           <value>
             <map>
               <entry key="ApiGatewayApplication" value="STOPPED" />
-              <entry key="BatchApplication" value="STOPPED" />
               <entry key="BatchKillApplication" value="STOPPED" />
               <entry key="EurekaApplication" value="STOPPED" />
               <entry key="OrderingApplication" value="STOPPED" />
@@ -480,7 +494,8 @@
       <workItem from="1767496917564" duration="891000" />
       <workItem from="1767503533459" duration="39000" />
       <workItem from="1772934030019" duration="1689000" />
-      <workItem from="1772935904622" duration="7580000" />
+      <workItem from="1772935904622" duration="9675000" />
+      <workItem from="1773040145275" duration="9868000" />
     </task>
     <task id="LOCAL-00001" summary="test: 배치 강의 연습">
       <option name="closed" value="true" />
@@ -658,7 +673,15 @@
       <option name="project" value="LOCAL" />
       <updated>1772937529128</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="feat: 주식 데이터 로드 기능 추가">
+      <option name="closed" value="true" />
+      <created>1772948950230</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1772948950230</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -710,7 +733,8 @@
     <MESSAGE value="test: 배치 테스트 코드 학습" />
     <MESSAGE value="배치 코드 주석 처리" />
     <MESSAGE value="init stock" />
-    <option name="LAST_COMMIT_MESSAGE" value="init stock" />
+    <MESSAGE value="feat: 주식 데이터 로드 기능 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 주식 데이터 로드 기능 추가" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

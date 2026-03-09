@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  # 1. Eureka Server
+  eureka-server:
+    build: ./eureka
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+    networks:
+      - msa-net
+
+  # 2. Stock Service
+  stock-service:
+    build: ./stock
+    container_name: stock-service
+    # 유레카 실행 후 실행되도록 설정
+    depends_on:
+      - eureka-server
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+    networks:
+      - msa-net
+  
+  # 3. API Gateway
+  api-gateway:
+    build: ./api-gateway
+    container_name: api-gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - eureka-server
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+    networks:
+      - msa-net
+
+networks:
+  msa-net:
+    driver: bridge

@@ -17,12 +17,12 @@ spring:
             allowedHeaders: '*'
             allowedCredentials: true
       routes:
-        - id: stock-servcie
+        - id: stock-service
           predicates:
-            - Path=/stock-servcie/**
+            - Path=/stock-service/**
           filters:
             - StripPrefix=1
-          uri: lb://stock-servcie
+          uri: lb://stock-service
 #        - id: member-service
 #          predicates:
 #            - Path=/member-service/**
