@@ -1,4 +1,3 @@
-version: '3.8'
 
 services:
   # 1. Eureka Server
@@ -34,6 +33,19 @@ services:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
     networks:
       - msa-net
+
+  jenkins:
+    #image: jenkins/jenkins:lts
+    build: ./jenkins
+    container_name: jenkins
+    user: root # 권한 충돌 방지 및 도커 명령어 실행을 위해 root 권한 사용
+    privileged: true # 도커 엔진 접근을 위한 특권 부여
+    ports:
+      - "9091:8080" # [호스트포트:컨테이너포트] Gateway(8080)와 충돌 피하기 위해 9090 사용
+      - "50000:50000" # 젠킨스 에이전트 통신용 포트
+    volumes:
+      - ./jenkins_home:/var/jenkins_home # 젠킨스 설정 및 빌드 데이터 로컬 저장
+      - /var/run/docker.sock:/var/run/docker.sock # 핵심: 젠킨스 내부에서 호스트의 도커 엔진을 공유 사용
 
 networks:
   msa-net:
