@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95680bc3-4f7a-4703-953b-294295a2b3dd" name="변경" comment="chor: 도커 수정">
+    <list default="true" id="95680bc3-4f7a-4703-953b-294295a2b3dd" name="변경" comment="feat: 스톡 버전 업">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stock/src/main/java/com/mrlee/stock/contoller/StockController.java" beforeDir="false" afterPath="$PROJECT_DIR$/stock/src/main/java/com/mrlee/stock/contoller/StockController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -495,7 +496,7 @@
       <workItem from="1772935904622" duration="9675000" />
       <workItem from="1773040145275" duration="13087000" />
       <workItem from="1773116961047" duration="598000" />
-      <workItem from="1773125906379" duration="1891000" />
+      <workItem from="1773125906379" duration="3499000" />
     </task>
     <task id="LOCAL-00001" summary="test: 배치 강의 연습">
       <option name="closed" value="true" />
@@ -697,7 +698,15 @@
       <option name="project" value="LOCAL" />
       <updated>1773212293337</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="feat: 스톡 버전 업">
+      <option name="closed" value="true" />
+      <created>1773214664787</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1773214664787</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -727,7 +736,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="test: 배치 강의 연습" />
     <MESSAGE value="build: gradle 의존성 추가" />
     <MESSAGE value="build: yml 코드 설정 세팅" />
     <MESSAGE value="feat: 배치 실행 결과를 프로세스 종료코드로 반환하도록 main 수정" />
@@ -752,7 +760,8 @@
     <MESSAGE value="feat: 주식 데이터 로드 기능 추가" />
     <MESSAGE value="feat: 스톡 버전 조회" />
     <MESSAGE value="chor: 도커 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="chor: 도커 수정" />
+    <MESSAGE value="feat: 스톡 버전 업" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 스톡 버전 업" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
