@@ -1,4 +1,4 @@
-name: My Operation CI
+name: My Operation CI & Docker Package
 
 on:
   push:
@@ -20,13 +20,19 @@ jobs:
       - name: Gradle 실행 권한 부여
         run: chmod +x gradlew
 
-      - name: my-operation 모듈만 타겟팅하여 빌드
-        # 멀티 모듈 중 특정 모듈만 콕 집어서 빌드합니다.
+      - name: my-operation 모듈 빌드 (.jar 생성)
         run: ./gradlew :my-operation:build
 
-      - name: 빌드 결과물(Artifact) 깃허브에 보관
+      - name: Docker 이미지 빌드 및 .tar로 압축
+        run: |
+          # my-operation 폴더로 이동하여 도커 파일 실행
+          cd my-operation
+          docker build -t my-operation-image:latest .
+          # 만들어진 이미지를 tar 파일로 추출
+          docker save -o my-operation-image.tar my-operation-image:latest
+
+      - name: 추출된 Docker tar 파일을 깃허브에 업로드
         uses: actions/upload-artifact@v4
         with:
-          name: my-operation-build-file
-          # 아티팩트를 찾을 경로도 해당 모듈 폴더 안으로 지정해야 합니다.
-          path: my-operation/build/libs/*.jar
+          name: my-operation-docker-image
+          path: my-operation/my-operation-image.tar

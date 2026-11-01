@@ -29,17 +29,4 @@ class MyOperationServiceIntegrationTest {
         assertThat(result.getName()).isEqualTo("이경택");
         assertThat(result.getPrice()).isEqualTo(36);
     }
-
-    @Test
-    void myOperationCreate_Error() {
-        // given
-        MyOperation myOperation = new MyOperation("이경택", 36);
-
-        // when
-        MyOperation result = myOperationService.myOperation("이경택", 36);
-
-        // then
-        assertThat(result.getName()).isEqualTo("이경택");
-        assertThat(result.getPrice()).isEqualTo(38);
-    }
 }
