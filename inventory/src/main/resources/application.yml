@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: inventory
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/send_box?serverTimezone=UTC&characterEncoding=UTF-8
+    username: root
+    password: root1234
+
+server:
+  port: 8001
+
+logging:
+  level:
+    org.apache.kafka.clients.NetworkClient: ERROR
+    org.apache.kafka.clients.Metadata: ERROR
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: prometheus # 프로메테우스 엔드포인트 개방
+  metrics:
+    tags:
+      application: ${spring.application.name} # 그라파나에서 서비스 구분을 위한 태그

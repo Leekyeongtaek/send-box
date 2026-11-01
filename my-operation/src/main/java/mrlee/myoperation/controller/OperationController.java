@@ -1,0 +1,17 @@
+package mrlee.myoperation.controller;
+
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@Slf4j
+@RestController
+@RequestMapping("/api/operation")
+public class OperationController {
+
+    @PostMapping("/health")
+    public String healthCheck() {
+        return "I am healthy!";
+    }
+}

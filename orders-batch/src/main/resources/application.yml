@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: orders-batch
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/send_box?serverTimezone=UTC&characterEncoding=UTF-8
+    username: root
+    password: root1234
+
+  batch:
+    job:
+      enabled: true
+    jdbc:
+      initialize-schema: always
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+logging:
+  level:
+    root: INFO
+    org.springframework: WARN

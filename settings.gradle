@@ -1,0 +1,10 @@
+rootProject.name = 'send-box'
+
+include 'orders-batch'
+include 'orders'
+include 'inventory'
+include 'payment'
+include 'global'
+include 'e-commerce'
+include 'my-test'
+include 'my-operation'
