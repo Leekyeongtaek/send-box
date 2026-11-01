@@ -1,5 +1,5 @@
 # M2 맥북 맞춤형 강제 지정
-FROM --platform=linux/arm64 eclipse-temurin:17-jdk-alpine
+FROM eclipse-temurin:17-jdk-alpine
 WORKDIR /app
 COPY build/libs/*-SNAPSHOT.jar app.jar
 
