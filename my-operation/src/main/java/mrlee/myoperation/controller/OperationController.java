@@ -12,6 +12,6 @@ public class OperationController {
 
     @PostMapping("/health")
     public String healthCheck() {
-        return "I am healthy!";
+        return "I am healthy! V2";
     }
 }
