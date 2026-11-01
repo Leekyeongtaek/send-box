@@ -1,0 +1,32 @@
+name: My Operation CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 최신 코드 가져오기
+        uses: actions/checkout@v4
+
+      - name: JDK 17 세팅
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Gradle 실행 권한 부여
+        run: chmod +x gradlew
+
+      - name: my-operation 모듈만 타겟팅하여 빌드
+        # 멀티 모듈 중 특정 모듈만 콕 집어서 빌드합니다.
+        run: ./gradlew :my-operation:build
+
+      - name: 빌드 결과물(Artifact) 깃허브에 보관
+        uses: actions/upload-artifact@v4
+        with:
+          name: my-operation-build-file
+          # 아티팩트를 찾을 경로도 해당 모듈 폴더 안으로 지정해야 합니다.
+          path: my-operation/build/libs/*.jar
